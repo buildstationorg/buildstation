@@ -39,7 +39,7 @@ export default function Home() {
       <div className="flex flex-row gap-4 items-center">
         <Button asChild>
           <Link href="/our-story"> 
-            <Flame className="mr-2 h-4 w-4" /> join the hacker movement!
+            <Flame className="mr-2 h-4 w-4" /> read our story!
           </Link>
         </Button>
         <Button className="border-2 border-primary" variant="ghost" asChild>
@@ -48,7 +48,6 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-
     </div>
   );
 }
