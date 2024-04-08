@@ -43,8 +43,8 @@ export default function Home() {
           </Link>
         </Button>
         <Button className="border-2 border-primary" variant="ghost" asChild>
-          <Link href="/blog"> 
-            blog
+          <Link href="/library"> 
+            library
           </Link>
         </Button>
       </div>
