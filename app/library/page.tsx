@@ -36,6 +36,10 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-8 my-24 items-center justify-center text-center">
       <h1 className="text-3xl md:text-5xl font-bold">library</h1>
+      <Link className="underline text-blue-500" href="/">return Home</Link>
+      <h2 className="text-xl md:text-3xl font-semibold">open source</h2>
+      <h2 className="text-xl md:text-3xl font-semibold">bootcamps</h2>
+      <h2 className="text-xl md:text-3xl font-semibold">ecosystem guides</h2>
     </div>
   );
 }

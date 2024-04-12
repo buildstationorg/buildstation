@@ -31,7 +31,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col gap-1">
                 <h3 className="scroll-m-20 text-lg font-semibold tracking-tight mb-2">Job board</h3>
-                <Link href="/join-the-collective" className="text-gray-500 text-sm">Core</Link>
+                <Link href="/core" className="text-gray-500 text-sm">Core</Link>
                 <Link href="/form-a-team" className="text-gray-500 text-sm">Form a team</Link>
               </div>
             </div>

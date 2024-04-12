@@ -1,7 +1,7 @@
 
 export default function Page() {
   return (
-    <div className="flex flex-col gap-24 my-24 w-full items-center">
+    <div className="flex flex-col gap-24 w-full">
       <h1 className="text-3xl md:text-5xl font-bold">be the change you wish to see in the world.</h1>
       <div className="flex flex-col w-full gap-8">
         <h1 className="text-3xl font-medium">hi there!</h1>
