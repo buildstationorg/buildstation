@@ -35,41 +35,28 @@ export const metadata: Metadata = {
 const libraryCategories = [
   {
     id: 1,
+    slug: 'opensource',
     title: 'open source',
-    description: 'explore our open source projects and contribute to the global hacker movement',
-    href: '/open-source',
   },
   {
     id: 2,
+    slug: 'bootcamps',
     title: 'bootcamps',
-    description: 'join our bootcamps and learn from the best hackers in the world',
-    href: '/bootcamps',
   },
   {
     id: 3,
+    slug: 'ecosystem-guides',
     title: 'ecosystem guides',
-    description: 'learn how to build and grow your own hacker ecosystem',
-    href: '/ecosystem-guides',
   },
 ]
 
 const libraryPosts = [
   {
-    title: 'buildstation open source projects',
-    description: 'explore our open source projects and contribute to the global hacker movement',
-    href: '/open-source',
-  },
-  {
-    title: 'buildstation bootcamps',
-    description: 'join our bootcamps and learn from the best hackers in the world',
-    href: '/bootcamps',
-  },
-  {
-    title: 'buildstation ecosystem guides',
-    description: 'learn how to build and grow your own hacker ecosystem',
-    href: '/ecosystem-guides',
-  },
-
+    id: 1,
+    title: 'welcome page',
+    slug: '/posts',
+    category: 'opensource'
+  }
 ]
 
 export default function Page() {
@@ -80,7 +67,14 @@ export default function Page() {
       <div className="flex flex-col gap-8">
         {
           libraryCategories.map((category) => (
-            <h2 key={category.id} className="text-xl md:text-3xl font-semibold">{category.title}</h2>
+            <>
+              <h2 key={category.id} className="text-xl md:text-3xl font-semibold">{category.title}</h2>
+              {
+                libraryPosts.filter((post) => post.category === category.slug).map((post) => (
+                   <Link key={post.id} href={post.slug}>{post.title}</Link>
+                ))
+              }
+            </>
           ))
         }
       </div>
