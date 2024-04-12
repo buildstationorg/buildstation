@@ -32,14 +32,58 @@ export const metadata: Metadata = {
   },
 }
 
+const libraryCategories = [
+  {
+    id: 1,
+    title: 'open source',
+    description: 'explore our open source projects and contribute to the global hacker movement',
+    href: '/open-source',
+  },
+  {
+    id: 2,
+    title: 'bootcamps',
+    description: 'join our bootcamps and learn from the best hackers in the world',
+    href: '/bootcamps',
+  },
+  {
+    id: 3,
+    title: 'ecosystem guides',
+    description: 'learn how to build and grow your own hacker ecosystem',
+    href: '/ecosystem-guides',
+  },
+]
+
+const libraryPosts = [
+  {
+    title: 'buildstation open source projects',
+    description: 'explore our open source projects and contribute to the global hacker movement',
+    href: '/open-source',
+  },
+  {
+    title: 'buildstation bootcamps',
+    description: 'join our bootcamps and learn from the best hackers in the world',
+    href: '/bootcamps',
+  },
+  {
+    title: 'buildstation ecosystem guides',
+    description: 'learn how to build and grow your own hacker ecosystem',
+    href: '/ecosystem-guides',
+  },
+
+]
+
 export default function Page() {
   return (
-    <div className="flex flex-col gap-8 my-24 items-center justify-center text-center">
+    <div className="flex flex-col gap-8 w-full">
       <h1 className="text-3xl md:text-5xl font-bold">library</h1>
       <Link className="underline text-blue-500" href="/">return Home</Link>
-      <h2 className="text-xl md:text-3xl font-semibold">open source</h2>
-      <h2 className="text-xl md:text-3xl font-semibold">bootcamps</h2>
-      <h2 className="text-xl md:text-3xl font-semibold">ecosystem guides</h2>
+      <div className="flex flex-col gap-8">
+        {
+          libraryCategories.map((category) => (
+            <h2 key={category.id} className="text-xl md:text-3xl font-semibold">{category.title}</h2>
+          ))
+        }
+      </div>
     </div>
   );
 }
