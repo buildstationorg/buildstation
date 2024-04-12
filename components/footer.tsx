@@ -61,7 +61,7 @@ export default function Footer() {
                 <Image src="/facebook.svg" alt="facebook" width={28} height={28} />
               </div>
             </a>
-            <a target="_blank" href="https://youtube.com/@openforbuilders">
+            <a target="_blank" href="https://youtube.com/@buildstationorg">
               <div className="flex border-2 border-primary py-6 rounded-xl items-center justify-center text-primary-foreground">
                 <Image src="/youtube.svg" alt="youtube" width={28} height={28} />
               </div>
