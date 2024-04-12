@@ -54,7 +54,7 @@ const libraryPosts = [
   {
     id: 1,
     title: 'welcome page',
-    slug: '/posts',
+    slug: '/library/posts',
     category: 'opensource'
   }
 ]

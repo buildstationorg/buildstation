@@ -50,7 +50,9 @@ export default function RootLayout({
         <main className="flex flex-col items-center p-6 md:p-10 pb-12 font-mono">
           <div className="flex flex-col max-w-5xl w-full items-center gap-48">
             <SiteHeader />
-              {children}
+              <div className="flex flex-col max-w-3xl w-full">
+                {children}
+              </div>
             <Footer />
           </div>
         </main>
