@@ -11,10 +11,10 @@ export default function Code({ children, className }: { children?: React.ReactNo
   const match = /language-(\w+)/.exec(className || "");
 
   // Extract the metadata from the comment
-  const metadataMatch = String(children).match(/\/\/ metadata: (.+)/);
-  const metadata = metadataMatch 
-    ? JSON.parse(metadataMatch[1])
-    : null;
+  // const metadataMatch = String(children).match(/\/\/ metadata: (.+)/);
+  // const metadata = metadataMatch 
+  //   ? JSON.parse(metadataMatch[1])
+  //   : null;
 
   // Remove the metadata from the code string
   const codeString = String(children).replace(/\/\/ metadata: (.+)/, "").trim();
@@ -36,7 +36,7 @@ export default function Code({ children, className }: { children?: React.ReactNo
               <Terminal className="h-4 w-4" />
               <span>{match?.[1]}</span>
             </div>
-            {
+            {/* {
               metadata?.filename 
               ? 
               <div className="flex flex-row gap-1 items-center">
@@ -45,7 +45,7 @@ export default function Code({ children, className }: { children?: React.ReactNo
               </div>
               : 
               null
-            }
+            } */}
           </div>
           <CopyButton text={codeString} />
         </div>
