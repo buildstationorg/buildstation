@@ -5,8 +5,13 @@ import H4 from '@/components/mdx/h4'
 import P from '@/components/mdx/p'
 import Img from '@/components/mdx/img'
 import Code from '@/components/mdx/code'
+import Blockquote from '@/components/mdx/blockquote'
+import UL from '@/components/mdx/ul'
+import OL from '@/components/mdx/ol'
+import A from '@/components/mdx/a'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
+
   return {
     h2: H2,
     h3: H3,
@@ -14,6 +19,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     p: P,
     img: Img,
     code: Code,
+    blockquote: Blockquote,
+    ul: UL,
+    ol: OL,
+    a: A,
     ...components,
   }
 }
