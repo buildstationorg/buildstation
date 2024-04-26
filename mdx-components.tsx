@@ -4,6 +4,7 @@ import H3 from '@/components/mdx/h3'
 import H4 from '@/components/mdx/h4'
 import P from '@/components/mdx/p'
 import Img from '@/components/mdx/img'
+import Code from '@/components/mdx/code'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -12,6 +13,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h4: H4,
     p: P,
     img: Img,
+    code: Code,
     ...components,
   }
 }
