@@ -54,5 +54,11 @@ export const libraryPosts = [
     title: 'mini meetups',
     slug: '/library/mini-meetups',
     category: 'ecosystem-playbook'
+  },
+  {
+    id: 3,
+    title: 'bounty program',
+    slug: '/library/bounty-program',
+    category: 'ecosystem-playbook'
   }
 ]
