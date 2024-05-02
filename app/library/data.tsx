@@ -56,9 +56,15 @@ export const libraryPosts = [
     category: 'ecosystem-playbook'
   },
   {
-    id: 3,
+    id: 4,
     title: 'bounty program',
     slug: '/library/bounty-program',
+    category: 'ecosystem-playbook'
+  },
+  {
+    id: 5,
+    title: 'developer bootcamp',
+    slug: '/library/developer-bootcamp',
     category: 'ecosystem-playbook'
   }
 ]
