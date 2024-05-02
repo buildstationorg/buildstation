@@ -1,4 +1,5 @@
 import type { MDXComponents } from 'mdx/types'
+import H1 from '@/components/mdx/h1'
 import H2 from '@/components/mdx/h2'
 import H3 from '@/components/mdx/h3'
 import H4 from '@/components/mdx/h4'
@@ -13,6 +14,7 @@ import A from '@/components/mdx/a'
 export function useMDXComponents(components: MDXComponents): MDXComponents {
 
   return {
+    h1: H1,
     h2: H2,
     h3: H3,
     h4: H4,

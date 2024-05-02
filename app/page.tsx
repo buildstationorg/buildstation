@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-8 items-center justify-center text-center">
+    <div className="flex flex-col gap-8 items-center justify-center text-center my-36">
       <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">build the future with us!</h1>
       <div className="flex flex-row gap-4 items-center">
         <Button asChild>
