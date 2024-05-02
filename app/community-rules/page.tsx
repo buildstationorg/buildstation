@@ -1,7 +1,10 @@
+import Link from 'next/link'
+
 export default function Page() {
   return (
     <div className="flex flex-col gap-10">
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Community rules</h1>
+      <Link className="underline text-blue-500" href="/">return home</Link>
       <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">Be Kind and Respectful</h2>
       <p className="leading-7">Together let&rsquo;s build a positive, welcoming environment where everyone feels safe to share ideas, thoughts, and feedback. Let&rsquo;s be supportive, respect individual opinions, and report inappropriate posts if needed.</p>
       <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">Give More Than You Take—No Solicitations</h2>

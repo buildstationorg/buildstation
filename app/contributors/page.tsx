@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-8 w-full">
       <h1 className="text-3xl md:text-5xl font-bold">Contributors</h1>
-      <Link className="underline text-blue-500" href="/">return Home</Link>
+      <Link className="underline text-blue-500" href="/">return home</Link>
       <h2 className="text-xl font-semibold">core</h2>
       <div className="flex flex-col gap-2">
         {

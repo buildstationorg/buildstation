@@ -1,9 +1,12 @@
+import Link from "next/link";
+
 export default function Page() {
   return (
     <div className="flex flex-col gap-8">
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
         Privacy Policy
       </h1>
+      <Link className="underline text-blue-500" href="/">return home</Link>
       <p>
         This Privacy Policy describes Our policies and procedures on the
         collection, use and disclosure of Your information when You use the
