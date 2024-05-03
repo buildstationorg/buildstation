@@ -46,7 +46,7 @@ export default function Page() {
               <h2 className="text-xl md:text-3xl font-semibold mt-4 border-b pb-2">{category.title}</h2>
               {
                 libraryPosts.filter((post) => post.category === category.slug).map((post) => (
-                   <Link className="w-fit" key={post.id} href={post.slug}>{post.title}</Link>
+                  <Link className="w-fit" key={post.id} href={post.slug}>{post.title}</Link>
                 ))
               }
             </div>
@@ -54,5 +54,6 @@ export default function Page() {
         }
       </div>
     </div>
+
   );
 }

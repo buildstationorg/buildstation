@@ -46,7 +46,7 @@ export const libraryPosts = [
   {
     id: 2,
     title: 'dapp bootcamps',
-    slug: '/library/dapp-bootcamps',
+    slug: '/dapp-bootcamps',
     category: 'bootcamps'
   },
   {
