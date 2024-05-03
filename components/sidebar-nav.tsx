@@ -20,7 +20,7 @@ export default function SidebarNav(data: SidebarNavProps) {
   const pathname = usePathname()
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="md:flex md:flex-col md:gap-4 hidden md:sticky md:top-[126px] md:h-[calc(100vh-121px)]">
       {data.categories.map((category) => (
         <div key={category.id} className='flex flex-col gap-2'>
           <Link key={category.id} href={category.slug} className={pathname == category.slug ? "text-blue-500" : ""}>

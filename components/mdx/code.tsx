@@ -63,7 +63,7 @@ export default function Code({ children, className }: { children?: React.ReactNo
 
   // Render different styles for inline code and code blocks without a language
   if (isInlineCode) {
-    return <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold border-2">{codeString}</code>;
+    return <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold border-2 break-words">{codeString}</code>;
   }
   
   // Default for code blocks without a language
