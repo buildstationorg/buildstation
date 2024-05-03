@@ -9,7 +9,7 @@ interface PageNavProps {
 export default function PageNav(nav: PageNavProps) {
   if (!nav.backward) {
     return (
-      <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-1 gap-4 mt-4">
         <Link href={nav.forward.slug}>
           <div className="flex flex-row justify-between items-center text-left p-4 border-2 rounded-md hover:border-blue-500 hover:text-blue-500 text-muted-foreground">
             <div className="flex flex-col gap-2">
@@ -25,7 +25,7 @@ export default function PageNav(nav: PageNavProps) {
 
   if (!nav.forward) {
     return (
-      <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-1 gap-4 mt-4">
         <Link href={nav.backward.slug}>
           <div className="flex flex-row justify-between items-center text-right p-4 border-2 rounded-md hover:border-blue-500 hover:text-blue-500 text-muted-foreground">
             <ChevronLeft />
@@ -40,7 +40,7 @@ export default function PageNav(nav: PageNavProps) {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
       <Link href={nav.backward.slug}>
         <div className="flex flex-row justify-between items-center text-right p-4 border-2 rounded-md hover:border-blue-500 hover:text-blue-500 text-muted-foreground">
           <ChevronLeft />

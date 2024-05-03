@@ -6,7 +6,7 @@ export default function MdxLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="grid grid-cols-[300px_minmax(768px,_1fr)_200px] text-left gap-8 justify-center">
       <SidebarNav categories={dappBootcampsCategoryNavData} items={dappBootcampsItemNavData} />
-      <div>
+      <div className='flex flex-col gap-8'>
         {children}
       </div>
     </div>
