@@ -30,7 +30,7 @@ export default function Code({ children, className }: { children?: React.ReactNo
   if (!isInlineCode) {
     return (
       <div className="mt-6">
-        <div className="flex flex-row items-center justify-between bg-primary text-primary-foreground mt-[0.5em] px-4 py-3 rounded-t-[0.3em]">
+        <div className="flex flex-row items-center justify-between bg-secondary mt-[0.5em] px-4 py-3 rounded-t-[0.3em]">
           <div className="flex flex-col md:flex-row gap-2 md:gap-6">
             <div className="flex flex-row gap-1 items-center">
               <Terminal className="h-4 w-4" />
@@ -50,7 +50,7 @@ export default function Code({ children, className }: { children?: React.ReactNo
           <CopyButton text={codeString} />
         </div>
         <SyntaxHighlighter
-          style={oneDark}
+          style={oneLight}
           language={match?.[1]}
           customStyle={{ borderTopLeftRadius: "0", borderTopRightRadius: "0", marginTop: "0" }}
           PreTag="div"
