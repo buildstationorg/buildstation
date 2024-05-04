@@ -6,7 +6,7 @@ export default function Page() {
     <div className="flex flex-col gap-24 w-full">
       <h1 className="text-3xl md:text-5xl font-bold">be the change you wish to see in the world.</h1>
       <Link className="underline text-blue-500" href="/">return home</Link>
-      <div className="flex flex-col w-full gap-8">
+      <div className="flex flex-col w-full gap-12">
         <h1 className="text-3xl font-medium">hi there!</h1>
         <p>welcome aboard builders</p>
         <p>let&apos;s get you up to date with the storyline so far</p>
