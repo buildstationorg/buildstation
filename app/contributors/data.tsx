@@ -29,5 +29,12 @@ export const contributors = [
     role: "community",
     twitter: "https://twitter.com/kay_x86",
     github: "https://github.com/chauanhtuan185"
+  },
+  {
+    id: 2,
+    name: "Brother",
+    role: "community",
+    twitter: "https://twitter.com/anhphamrs",
+    github: "https://github.com/fuckthekingcode"
   }
 ]
