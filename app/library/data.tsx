@@ -50,6 +50,12 @@ export const libraryPosts = [
     category: 'bootcamps'
   },
   {
+    id: 6,
+    title: 'overview',
+    slug: '/library/ecosystem-playbook-overview',
+    category: 'ecosystem-playbook'
+  },
+  {
     id: 3,
     title: 'mini meetups',
     slug: '/library/mini-meetups',
