@@ -21,6 +21,7 @@ export default function Footer() {
               <div className="flex flex-col gap-1">
                 <h3 className="scroll-m-20 text-lg font-semibold tracking-tight mb-2">Team</h3>
                 <Link href="/our-story" className="text-gray-500 text-sm">Our story</Link>
+                <Link href="/our-goals" className="text-gray-500 text-sm">Our goals</Link>
                 <Link href="/support" className="text-gray-500 text-sm">Support</Link>
                 <Link href="/contributors" className="text-gray-500 text-sm">Contributors</Link>
               </div>
