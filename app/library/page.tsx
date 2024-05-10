@@ -38,7 +38,7 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-8 w-full">
       <h1 className="text-3xl md:text-5xl font-bold">library</h1>
-      <Link className="underline text-blue-500" href="/">return home</Link>
+      <Link className="underline text-blue-500 w-fit" href="/">return home</Link>
       <div className="flex flex-col gap-8">
         {
           libraryCategories.map((category) => (
