@@ -10,11 +10,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'buildstation',
-  description: 'join the hacker movement and build the future with us',
+  description: 'join the global movement and build the future with us',
   metadataBase: new URL('https://www.buildstation.org'),
   openGraph: {
     title: 'buildstation',
-    description: 'join the hacker movement and build the future with us',
+    description: 'join the global movement and build the future with us',
     url: 'https://www.buildstation.org',
     siteName: 'buildstation',
     images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'buildstation',
-    description: 'join the hacker movement and build the future with us',
+    description: 'join the global movement and build the future with us',
     creator: '@zxstim',
     images: ['/buildstation-tbn.png'],
   },
