@@ -58,19 +58,37 @@ export const libraryPosts = [
   {
     id: 3,
     title: 'mini meetups',
-    slug: '/library/mini-meetups',
+    slug: '/library/ecosystem-playbook-overview/mini-meetups',
+    category: 'ecosystem-playbook'
+  },
+  {
+    id: 6,
+    title: 'hacker house',
+    slug: '/library/ecosystem-playbook-overview/hacker-house',
     category: 'ecosystem-playbook'
   },
   {
     id: 4,
     title: 'bounty program',
-    slug: '/library/bounty-program',
+    slug: '/library/ecosystem-playbook-overview/bounty-program',
     category: 'ecosystem-playbook'
   },
   {
     id: 5,
     title: 'developer bootcamp',
-    slug: '/library/developer-bootcamp',
+    slug: '/library/ecosystem-playbook-overview/developer-bootcamp',
     category: 'ecosystem-playbook'
+  },
+  {
+    id: 7,
+    title: 'livestreams',
+    slug: '/library/videos/livestreams',
+    category: 'videos'
+  },
+  {
+    id: 8,
+    title: 'zero to one',
+    slug: '/library/videos/zero-to-one',
+    category: 'videos'
   }
 ]

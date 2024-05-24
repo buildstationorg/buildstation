@@ -1,8 +1,29 @@
-import Link from 'next/link'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/library">library</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage>bounty program</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
 
 # Bounty program
-
-<Link className="underline text-blue-500" href="/library">back to library</Link>
 
 ## Introduction
 A bounty program is an initiative that organizations launch to encourage individuals to contribute software, systems, or products into the ecosystem. By offering rewards or compensation for these contributions, the program aims to expand open source solutions within the ecosystem, grow the developer/builder community and create funnels for larger projects to explore.

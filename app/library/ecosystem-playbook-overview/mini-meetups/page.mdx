@@ -1,8 +1,29 @@
-import Link from 'next/link'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/library">library</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage>mini meetups</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
 
 # Mini meetup
-
-<Link className="underline text-blue-500" href="/library">back to library</Link>
 
 ## Introduction
 buildstation meetup is a simple meetup concept that is cost effective to run and has big marketing impact. buildstation hosts [ZxStim](https://twitter.com/zxstim), [Paulus](https://twitter.com/pauluspham0701) and [Dylan](https://twitter.com/0xdyln) have ran a weekly meetup series called BUIDL Station in Vietnam with over 50 sessions and created a vibrant and healthy builder community in Ho Chi Minh City (Vietnam). This style of meetup is great for networking and for any ecosystem builders/developer relations/developer advocates to undertake.

@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { libraryCategories, libraryPosts } from '@/app/library/data'
 
 export default function Page() {
   return (
