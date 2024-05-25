@@ -1,8 +1,29 @@
-import Link from 'next/link'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/library">library</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage>ecosystem playbook overview</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
 
 # ecosystem playbook overview
-
-<Link className="underline text-blue-500" href="/library">back to library</Link>
 
 A playbook on how to build a thriving ecosystem of builders.
 
@@ -41,9 +62,9 @@ Absolutely! We have seen many builders in our community grow from zero to one, a
 - Check out the following articles to learn more. If you have any questions or want to collaborate, feel free to reach out to us on [Telegram](https://t.me/buildstation).
 
 ### playbook
-- [mini meetups](/library/mini-meetups)
-- [bounty programs](/library/bounty-programs)
-- [developer bootcamp](/library/developer-bootcamp)
+- [mini meetups](/library/ecosystem-playbook-overview/mini-meetups)
+- [bounty programs](/library/ecosystem-playbook-overview/bounty-programs)
+- [developer bootcamp](/library/ecosystem-playbook-overview/developer-bootcamp)
 
 ### OSS
-- [awesome-buildstation](/library/awesome-buildstation)
+- [awesome-buildstation](/library/ecosystem-playbook-overview/awesome-buildstation)
