@@ -1,4 +1,4 @@
-import { Flame } from "lucide-react"
+import { Bug } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
 
@@ -9,8 +9,8 @@ export default function Home() {
       <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">build the future with us!</h1>
       <div className="flex flex-row gap-4 items-center">
         <Button asChild>
-          <Link href="/our-story"> 
-            <Flame className="mr-2 h-4 w-4" /> read our story!
+          <Link href="/bounty"> 
+            <Bug className="mr-2 h-4 w-4" /> hunt bounty
           </Link>
         </Button>
         <Button className="border-2 border-primary" variant="ghost" asChild>

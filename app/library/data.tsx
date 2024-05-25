@@ -15,25 +15,10 @@ export const libraryCategories = [
     title: 'ecosystem playbook',
   },
   {
-    id: 4,
-    slug: 'tutorials',
-    title: 'tutorials',
-  },
-  {
     id: 5,
     slug: 'videos',
     title: 'videos',
-  },
-  {
-    id: 6,
-    slug: 'workshops',
-    title: 'workshops',
-  },
-  {
-    id: 7,
-    slug: 'blogs',
-    title: 'blogs',
-  },
+  }
 ]
 
 export const libraryPosts = [
