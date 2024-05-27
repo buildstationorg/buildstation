@@ -6,8 +6,8 @@ export const libraryCategories = [
   },
   {
     id: 2,
-    slug: 'bootcamps',
-    title: 'bootcamps',
+    slug: 'learning',
+    title: 'learning',
   },
   {
     id: 3,
@@ -30,9 +30,9 @@ export const libraryPosts = [
   },
   {
     id: 2,
-    title: 'dapp bootcamps',
-    slug: '/dapp-bootcamps',
-    category: 'bootcamps'
+    title: 'evm dapp bootcamp',
+    slug: '/evm-dapp-bootcamp',
+    category: 'learning'
   },
   {
     id: 6,

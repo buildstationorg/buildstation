@@ -21,7 +21,7 @@ export default function SidebarNav(data: SidebarNavProps) {
 
   return (
     <div className="md:flex md:flex-col md:gap-4 hidden md:sticky md:top-[126px] md:h-[calc(100vh-121px)]">
-      <h2 className="text-lg font-semibold">Bootcamp</h2>
+      <h2 className="text-lg font-semibold">Curriculum</h2>
       {data.categories.map((category) => (
         <div key={category.id} className='flex flex-col gap-2'>
           <Link key={category.id} href={category.slug} className={pathname == category.slug ? "text-blue-500" : ""}>

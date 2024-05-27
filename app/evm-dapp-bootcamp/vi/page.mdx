@@ -1,8 +1,35 @@
-import Link from 'next/link'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
 
-# DApp Bootcamp
+import PageNav from '@/components/page-nav'
 
-<Link className="underline text-blue-500" href="/dapp-bootcamps">quay lại</Link>
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/library">library</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/evm-dapp-bootcamp">evm dapp bootcamp </BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage>vi</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+
+# EVM DApp Bootcamp
 
 ## Giới thiệu
 ​DApp Bootcamp là một chương trình đào tạo đặc biệt được thiết kế dành riêng cho các lập trình viên muốn mở rộng kiến thức và kỹ năng của mình trong lĩnh vực phát triển ứng dụng Web3. Qua chương trình này, bạn sẽ được trải nghiệm một lộ trình học tập bài bản, từ cơ bản đến nâng cao, về công nghệ blockchain, smart contracts, và cách thức xây dựng DApp hiệu quả. Đặc biệt, Bootcamp còn cung cấp cơ hội thực hành trực tiếp trên các dự án thực tế, giúp học viên không chỉ nắm vững kiến thức lý thuyết mà còn rèn luyện kỹ năng áp dụng vào thực tiễn, mở ra nhiều cơ hội nghề nghiệp trong tương lai.
@@ -21,3 +48,10 @@ Nội dung DApp Bootcamp được phát triển dựa trên [Khoá học miễn 
 
 ## Chương trình
 1. [Giới thiệu về blockchain](/dapp-bootcamps/vi/solidity)
+
+<PageNav
+    forward={{
+        title: "Solidity là gì?",
+        slug: "/evm-dapp-bootcamp/vi/solidity" 
+    }}
+/>
