@@ -1,23 +1,23 @@
-type Payment = {
-  id: string
+type Bounty = {
+  id: number
   amount: number
   status: "pending" | "processing" | "success" | "failed"
-  email: string
+  title: string
 }
  
-export const data: Payment[] = [
+export const data: Bounty[] = [
   {
-    id: "728ed52f",
+    id: 1,
+    title: "test bounty 1",
     amount: 100,
     status: "pending",
-    email: "m@example.com",
+
   },
   {
-    id: "489e1d42",
+    id: 2,
+    title: "test bounty 2",
     amount: 125,
     status: "processing",
-    email: "example@gmail.com",
   },
-  // ...
 ]
 
