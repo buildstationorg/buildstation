@@ -4,8 +4,8 @@ import Link from 'next/link'
 export default function Page() {
   return (
     <div className="flex flex-col gap-24 w-full">
-      <h1 className="text-3xl md:text-5xl font-bold">be the change you wish to see in the world.</h1>
       <Link className="underline text-blue-500" href="/">return home</Link>
+      <h1 className="text-3xl md:text-5xl font-bold">be the change you wish to see in the world.</h1>
       <div className="flex flex-col w-full gap-12">
         <h1 className="text-3xl font-medium">hi there!</h1>
         <p>welcome aboard builders</p>
