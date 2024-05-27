@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Payment, columns } from "./columns"
+import { columns } from "./columns"
 import { DataTable } from "./data-table"
 import { data } from "./data"
 
