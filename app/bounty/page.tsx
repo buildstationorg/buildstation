@@ -10,6 +10,5 @@ export default function Page() {
       <h1 className="text-3xl md:text-5xl font-bold">bounty</h1>
       <DataTable columns={columns} data={data} />
     </div>
-
   );
 }

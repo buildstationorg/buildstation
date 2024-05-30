@@ -7,8 +7,9 @@ import { ColumnDef } from "@tanstack/react-table"
 export type Bounty = {
   id: number
   amount: number
-  status: "pending" | "processing" | "success" | "failed"
   title: string
+  ticker: string
+  status: "pending" | "processing" | "success" | "failed"
 }
 
 export const columns: ColumnDef<Bounty>[] = [
@@ -21,11 +22,15 @@ export const columns: ColumnDef<Bounty>[] = [
     header: "Title",
   },
   {
-    accessorKey: "status",
-    header: "Status",
-  },
-  {
     accessorKey: "amount",
     header: "Amount",
+  },
+  {
+    accessorKey: "ticker",
+    header: "Ticker",
+  },
+  {
+    accessorKey: "status",
+    header: "Status",
   },
 ]
