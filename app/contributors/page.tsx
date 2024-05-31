@@ -1,33 +1,32 @@
-import Link from 'next/link'
-import { coreContributors, contributors } from '@/app/contributors/data'
+import Link from "next/link";
+import { columns } from "./columns";
+import { DataTable } from "./data-table";
+import { data } from "./data";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 export default function Page() {
   return (
     <div className="flex flex-col gap-8 w-full">
-      <h1 className="text-3xl md:text-5xl font-bold">Contributors</h1>
-      <Link className="underline text-blue-500" href="/">return home</Link>
-      <h2 className="text-xl font-semibold">core</h2>
-      <div className="flex flex-row flex-wrap gap-4 md:gap-8">
-        {
-          coreContributors.map((coreContributor) => (
-            <div key={coreContributor.id} className="flex flex-row gap-4 border-2 border-primary p-2 rounded-md w-fit">
-              <a className="text-md underline w-fit" href={coreContributor.github} target='_blank'>{coreContributor.name}</a>
-              <a className="text-md underline w-fit" href={coreContributor.github} target='_blank'>𝕏</a>
-            </div>
-          ))
-        }
-      </div>
-      <h2 className="text-xl font-semibold">community</h2>
-      <div className="flex flex-row flex-wrap gap-4 md:gap-8">
-        {
-          contributors.map((contributor) => (
-            <div key={contributor.id} className="flex flex-row gap-4 border-2 border-primary p-2 rounded-md w-fit">
-              <a className="text-md underline w-fit" href={contributor.github} target='_blank'>{contributor.name}</a>
-              <a className="text-md underline w-fit" href={contributor.github} target='_blank'>𝕏</a>
-            </div>
-          ))
-        }
-      </div>
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">home</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+              <BreadcrumbPage>contributors</BreadcrumbPage>
+            </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+      <h1 className="text-3xl md:text-5xl font-bold">contributors</h1>
+      <DataTable columns={columns} data={data} />
     </div>
   );
 }

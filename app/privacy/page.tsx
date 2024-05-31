@@ -1,12 +1,29 @@
-import Link from "next/link";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 export default function Page() {
   return (
     <div className="flex flex-col gap-8">
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">home</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>privacy policy</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
         Privacy Policy
       </h1>
-      <Link className="underline text-blue-500" href="/">return home</Link>
       <p>
         This Privacy Policy describes Our policies and procedures on the
         collection, use and disclosure of Your information when You use the
@@ -87,7 +104,9 @@ export default function Page() {
         </li>
         <li>
           Website refers to buildstation.org, accessible from{" "}
-          <a href="https://www.buildstation.org">https://www.buildstation.org</a>
+          <a href="https://www.buildstation.org">
+            https://www.buildstation.org
+          </a>
         </li>
         <li>
           You means the individual accessing or using the Service, or the
@@ -172,7 +191,8 @@ export default function Page() {
       </h4>
       <p>
         The privacy of our website visitors is important to us so we do not
-        track any individual people. As a visitor to the buildstation.org website:
+        track any individual people. As a visitor to the buildstation.org
+        website:
       </p>
       <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
         <li>No personal information is collected</li>

@@ -1,40 +1,22 @@
-export const coreContributors = [
+type Contributor = {
+  id: number
+  name: string
+  github: string
+  twitter: string
+}
+ 
+export const data: Contributor[] = [
   {
     id: 1,
-    name: "ZxStim",
-    role: "Core",
-    twitter: "https://twitter.com/zxstim",
-    github: "https://github.com/zxstim"
+    name: "Kay",
+    github: "https://twitter.com/kay_x86",
+    twitter: "https://github.com/chauanhtuan185"
   },
   {
     id: 2,
-    name: "Paulus",
-    role: "Core",
-    twitter: "https://twitter.com/pauluspham0701",
-    github: "https://github.com/phatpham0701"
+    name: "SaitamaCode",
+    github: "https://github.com/fuckthekingcode",
+    twitter: "https://twitter.com/anhphamrs"
   },
-  {
-    id: 3,
-    name: "Dylan",
-    role: "Core",
-    twitter: "https://twitter.com/0xdyln",
-    github: "https://github.com/dylanngph"
-  }
 ]
 
-export const contributors = [
-  {
-    id: 1,
-    name: "Anh Tuan",
-    role: "community",
-    twitter: "https://twitter.com/kay_x86",
-    github: "https://github.com/chauanhtuan185"
-  },
-  {
-    id: 2,
-    name: "Brother",
-    role: "community",
-    twitter: "https://twitter.com/anhphamrs",
-    github: "https://github.com/fuckthekingcode"
-  }
-]
