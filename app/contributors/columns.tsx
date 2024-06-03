@@ -7,6 +7,7 @@ import { ColumnDef } from "@tanstack/react-table"
 export type Contributor = {
   id: number
   name: string
+  role: string
   github: string
   twitter: string
 }
@@ -19,6 +20,10 @@ export const columns: ColumnDef<Contributor>[] = [
   {
     accessorKey: "name",
     header: "Name",
+  },
+  {
+    accessorKey: "role",
+    header: "Role",
   },
   {
     accessorKey: "github",
