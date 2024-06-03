@@ -15,22 +15,22 @@ export type Bounty = {
 export const columns: ColumnDef<Bounty>[] = [
   {
     accessorKey: "id",
-    header: "No.",
+    header: () => <div className="font-bold text-primary text-lg">no.</div>,
   },
   {
     accessorKey: "title",
-    header: "Title",
+    header: () => <div className="font-bold text-primary text-lg">title</div>,
   },
   {
     accessorKey: "amount",
-    header: "Amount",
+    header: () => <div className="font-bold text-primary text-lg">amount</div>,
   },
   {
     accessorKey: "ticker",
-    header: "Ticker",
+    header: () => <div className="font-bold text-primary text-lg">ticker</div>,
   },
   {
     accessorKey: "status",
-    header: "Status",
+    header: () => <div className="font-bold text-primary text-lg">status</div>,
   },
 ]

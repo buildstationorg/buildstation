@@ -2,8 +2,8 @@ type Contributor = {
   id: number
   name: string
   role: string
-  github: string
-  twitter: string
+  github: string | boolean
+  twitter: string | boolean
 }
 
 export const coreData: Contributor[] = [
@@ -49,8 +49,8 @@ export const data: Contributor[] = [
     id: 6,
     name: "SNZ Capital",
     role: "sponsor",
-    github: "https://github.com/fuckthekingcode",
-    twitter: "https://twitter.com/anhphamrs"
+    github: false,
+    twitter: "https://twitter.com/snzholdings"
   }
 ]
 
