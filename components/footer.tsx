@@ -48,29 +48,29 @@ export default function Footer() {
               Explore our repositories <ExternalLink className="w-4 h-4" />
             </a>
           </div>
-          <div className="grid grid-cols-5">
+          <div className="grid grid-cols-5 border border-primary">
             <a target="_blank" href="https://x.com/buildstationorg">
-              <div className="flex border border-primary py-6 items-center justify-center text-primary-foreground">
+              <div className="flex py-6 items-center justify-center text-primary-foreground">
                 <Image src="/x.svg" alt="X" width={28} height={28} />
               </div>
             </a>
             <a target="_blank" href="https://github.com/buildstationorg">
-              <div className="flex border border-primary py-6 items-center justify-center text-primary-foreground">
+              <div className="flex py-6 items-center justify-center text-primary-foreground">
                 <Image src="/github.svg" alt="github" width={28} height={28} />
               </div>
             </a>
             <a target="_blank" href="https://facebook.com/buildstationorg">
-              <div className="flex border border-primary py-6 items-center justify-center text-primary-foreground">
+              <div className="flex py-6 items-center justify-center text-primary-foreground">
                 <Image src="/facebook.svg" alt="facebook" width={28} height={28} />
               </div>
             </a>
             <a target="_blank" href="https://youtube.com/@buildstationorg">
-              <div className="flex border border-primary py-6 items-center justify-center text-primary-foreground">
+              <div className="flex py-6 items-center justify-center text-primary-foreground">
                 <Image src="/youtube.svg" alt="youtube" width={28} height={28} />
               </div>
             </a>
             <a target="_blank" href="https://discord.gg/P9Xun3VzNT">
-              <div className="flex border border-primary py-6 items-center justify-center text-primary-foreground">
+              <div className="flex py-6 items-center justify-center text-primary-foreground">
                 <Image src="/discord.svg" alt="discord" width={28} height={28} />
               </div>
             </a>
