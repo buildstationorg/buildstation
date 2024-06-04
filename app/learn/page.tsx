@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { libraryCategories, libraryPosts } from '@/app/library/data'
+import { learnTracks, learnCourses, learnTrack, learnCourse } from './data'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,13 +11,13 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-  title: 'buildstation library',
-  description: 'explore our library for resources, inspirations, and more!',
+  title: 'buildstation learn',
+  description: 'explore our learning module for information on different languages and frameworks',
   metadataBase: new URL('https://www.buildstation.org'),
   openGraph: {
-    title: 'buildstation library',
-    description: 'explore our library for resources, inspirations, and more!',
-    url: 'https://www.buildstation.org/library',
+    title: 'buildstation learn',
+    description: 'explore our learning module for information on different languages and frameworks',
+    url: 'https://www.buildstation.org/learn',
     siteName: 'buildstation',
     images: [
       {
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'buildstation library',
-    description: 'explore our library for resources, inspirations, and more!',
+    title: 'buildstation learn',
+    description: 'explore our learning module for information on different languages and frameworks',
     creator: '@zxstim',
     images: ['/buildstation-tbn.png'],
   },
@@ -50,19 +50,19 @@ export default function Page() {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>library</BreadcrumbPage>
+            <BreadcrumbPage>learn</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <h1 className="text-3xl md:text-5xl font-bold">library</h1>
+      <h1 className="text-3xl md:text-5xl font-bold">learn</h1>
       <div className="flex flex-col gap-8">
         {
-          libraryCategories.map((category) => (
-            <div key={category.id} className="flex flex-col gap-4">
-              <h2 className="text-xl md:text-3xl font-semibold mt-4 border-b pb-2">{category.title}</h2>
+          learnTracks.map((track: learnTrack) => (
+            <div key={track.id} className="flex flex-col gap-4">
+              <h2 className="text-xl md:text-3xl font-semibold mt-4 border-b pb-2">{track.title}</h2>
               {
-                libraryPosts.filter((post) => post.category === category.slug).map((post) => (
-                  <Link className="w-fit" key={post.id} href={post.slug}>{post.title}</Link>
+                learnCourses.filter((course: learnCourse) => course.track === track.slug).map((course: learnCourse) => (
+                  <Link className="w-fit" key={course.id} href={course.slug}>{course.title}</Link>
                 ))
               }
             </div>
@@ -70,6 +70,5 @@ export default function Page() {
         }
       </div>
     </div>
-
   );
 }

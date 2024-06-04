@@ -1,4 +1,17 @@
-export const libraryCategories = [
+type LibraryCategory = {
+  id: number
+  slug: string
+  title: string
+}
+
+type LibraryPost = {
+  id: number
+  title: string
+  slug: string
+  category: string
+}
+
+export const libraryCategories: LibraryCategory[] = [
   {
     id: 1,
     slug: 'awesome-buildstation',
@@ -21,7 +34,7 @@ export const libraryCategories = [
   }
 ]
 
-export const libraryPosts = [
+export const libraryPosts: LibraryPost[] = [
   {
     id: 1,
     title: 'list of awesome buildstation oss projects',
