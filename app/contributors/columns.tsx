@@ -34,7 +34,7 @@ export const columns: ColumnDef<Contributor>[] = [
       } else {
         const githubLink: string = row.getValue("github")
         const handle = githubLink.split("/").pop()
-        return <a className="underline underline-offset-2 text-blue-500" href={githubLink}>{handle}</a>
+        return <a target="_blank" className="underline underline-offset-2 text-blue-500" href={githubLink}>{handle}</a>
       }
     },
   },
@@ -47,7 +47,7 @@ export const columns: ColumnDef<Contributor>[] = [
       } else {
         const twitterLink: string = row.getValue("twitter")
         const handle = twitterLink.split("/").pop()
-        return <a className="underline underline-offset-2 text-blue-500" href={twitterLink}>{handle}</a>
+        return <a target="_blank" className="underline underline-offset-2 text-blue-500" href={twitterLink}>{handle}</a>
       }
     },
   }
