@@ -1,6 +1,7 @@
 import { Bug } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
+import HomeMenu from "@/components/home-menu";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           </Link>
         </Button>
       </div>
+      <HomeMenu />
     </div>
   );
 }

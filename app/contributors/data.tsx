@@ -50,7 +50,7 @@ export const data: Contributor[] = [
     name: "SNZ Capital",
     role: "sponsor",
     github: false,
-    twitter: "https://twitter.com/snzholdings"
+    twitter: "https://twitter.com/snzholding"
   }
 ]
 
