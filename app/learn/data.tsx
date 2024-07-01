@@ -39,7 +39,7 @@ export const learnCourses: learnCourse[] = [
   {
     id: 2,
     title: 'fullstack evm dapp developer',
-    slug: '/fullstack-evm-dapp-developer',
+    slug: '/learn/fullstack-evm-dapp-developer',
     track: 'career-tracks'
   },
   {
