@@ -126,7 +126,7 @@ export default function HomeMenu() {
             size="icon"
             asChild
           >
-            <Link href="/devrel-playbook">
+            <Link href="/videos">
               <ArrowRight className="h-6 w-6" />
             </Link>
           </Button>
@@ -142,7 +142,7 @@ export default function HomeMenu() {
             size="icon"
             asChild
           >
-            <Link href="/devrel-playbook">
+            <Link href="/articles">
               <ArrowRight className="h-6 w-6" />
             </Link>
           </Button>
@@ -158,7 +158,7 @@ export default function HomeMenu() {
             size="icon"
             asChild
           >
-            <Link href="/devrel-playbook">
+            <Link href="/events">
               <ArrowRight className="h-6 w-6" />
             </Link>
           </Button>
