@@ -10,6 +10,7 @@ import { arbitrumPublicClient, klaytnPublicClient } from "./client";
 import { formatEther } from "viem";
 import { ExternalLink } from "lucide-react";
 import { Info } from 'lucide-react';
+import { CopyButton } from '@/components/copy-button';
 
 async function getMultichainBalances() {
   const arbitrumBalance = await arbitrumPublicClient.getBalance({
@@ -49,9 +50,14 @@ export default async function Page() {
         <p className="leading-7 text-sm">
           if you would like to donate to the treasury, please send your donation to
         </p>
-        <code className="">
-          0x439aa01146DEB050881a254c7490c7f466e4D88d
-        </code>
+        <div className="flex flex-row">
+          <code className="bg-blue-600 py-2 px-4 text-secondary overflow-x-auto">
+            0x439aa01146DEB050881a254c7490c7f466e4D88d
+          </code>
+          <div className="flex flex-row text-secondary px-2 py-2 text-center items-center bg-blue-600">
+            <CopyButton text="0x439aa01146DEB050881a254c7490c7f466e4D88d" />
+          </div>
+        </div>
         <p className="leading-7 text-sm">beside mainnet assets, we welcome testnet native tokens as well</p>
       </div>
       <div className="flex flex-col gap-2">
