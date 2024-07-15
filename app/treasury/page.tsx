@@ -68,22 +68,6 @@ export default async function Page() {
           <ExternalLink className="w-4 h-4 ml-2" />
         </a>
       </div>
-      <div className="flex flex-col gap-2">
-        <h2 className="scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight">
-          Kaia
-        </h2>
-        <p>{formatEther(klaytnBalance)} KLAY</p>
-        <a
-          href="https://arbiscan.io/address/0x439aa01146DEB050881a254c7490c7f466e4D88d"
-          target="_blank"
-          className="flex flex-row items-center underline underline-offset-2 text-blue-500 w-fit"
-        >
-          KlaytnFinder
-          <ExternalLink className="w-4 h-4 ml-2" />
-        </a>
-      </div>
-
-
     </div>
   );
 }
