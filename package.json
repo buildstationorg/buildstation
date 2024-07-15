@@ -31,7 +31,8 @@
     "remark-gfm": "^4.0.0",
     "simple-icons": "^11.12.0",
     "tailwind-merge": "^2.2.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "viem": "^2.17.4"
   },
   "devDependencies": {
     "@types/node": "^20",
