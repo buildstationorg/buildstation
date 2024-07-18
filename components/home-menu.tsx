@@ -3,38 +3,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function HomeMenu() {
-  const menuItems = [
-    {
-      id: 1,
-      title: "awesome-buildstation",
-      href: "/awesome-buildstation",
-    },
-    {
-      id: 2,
-      title: "learn",
-      href: "/learn",
-    },
-    {
-      id: 3,
-      title: "devrel playbook",
-      href: "/devrel-playbook",
-    },
-    {
-      id: 4,
-      title: "videos",
-      href: "/videos",
-    },
-    {
-      id: 5,
-      title: "articles",
-      href: "/articles",
-    },
-    {
-      id: 6,
-      title: "events",
-      href: "/events",
-    },
-  ];
 
   return (
     <div className="flex flex-col border-4 border-primary max-w-3xl divide-y-2 divide-primary">
@@ -44,10 +12,10 @@ export default function HomeMenu() {
       <div className="grid grid-cols-1 md:grid-cols-2 divide-y-2 md:divide-y-0 md:divide-x-2 divide-primary">
         <div className="grow text-left p-10">
           <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">
-            hunt bounty
+            go to HQ
           </h2>
           <p>
-            earn rewards by contributing to buildstation or other ecosystems
+            be the main character in your own legacy
           </p>
           <Button
             className="w-fit p-6 mt-8"
@@ -55,9 +23,9 @@ export default function HomeMenu() {
             size="icon"
             asChild
           >
-            <Link href="/bounty">
+            <a href="https://hq.buildstation.org">
               <ArrowRight className="h-6 w-6" />
-            </Link>
+            </a>
           </Button>
         </div>
         <div className="flex flex-col divide-y-2 divide-primary">
