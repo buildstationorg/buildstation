@@ -6,7 +6,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { arbitrumPublicClient, klaytnPublicClient } from "./client";
+import { arbitrumPublicClient } from "./client";
 import { formatEther } from "viem";
 import { ExternalLink } from "lucide-react";
 import { Info } from 'lucide-react';
@@ -17,15 +17,12 @@ async function getMultichainBalances() {
     address: "0x439aa01146DEB050881a254c7490c7f466e4D88d",
   });
 
-  const klaytnBalance = await klaytnPublicClient.getBalance({
-    address: "0x439aa01146DEB050881a254c7490c7f466e4D88d",
-  });
-
-  return { arbitrumBalance, klaytnBalance };
+  return { arbitrumBalance };
 }
+export const fetchCache = "force-no-store";
 
 export default async function Page() {
-  const { arbitrumBalance, klaytnBalance } = await getMultichainBalances();
+  const { arbitrumBalance } = await getMultichainBalances();
 
   return (
     <div className="flex flex-col gap-8 w-full">
