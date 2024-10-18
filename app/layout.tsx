@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'buildstation',
     description: 'join the global movement and build the future with us',
-    creator: '@zxstim',
+    creator: '@buildstationorg',
     images: ['/buildstation-tbn.png'],
   },
 }
