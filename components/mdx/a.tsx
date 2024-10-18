@@ -8,6 +8,7 @@ export default function A({
   return (
     <a
       href={href}
+      target="_blank"
       className="font-medium text-blue-500 underline underline-offset-4"
     >
       {children}
