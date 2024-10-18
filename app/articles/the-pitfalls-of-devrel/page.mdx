@@ -5,9 +5,10 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
+} from "@/components/ui/breadcrumb";
+import Image from "next/image";
 
-<Breadcrumb>
+<Breadcrumb className="mb-8">
   <BreadcrumbList>
     <BreadcrumbItem>
       <BreadcrumbLink href="/">home</BreadcrumbLink>
@@ -18,10 +19,18 @@ import {
     </BreadcrumbItem>
     <BreadcrumbSeparator />
     <BreadcrumbItem>
-      <BreadcrumbPage>the pitfalls of devrel strategies</BreadcrumbPage>
+      <BreadcrumbPage>the pitfalls of devrel</BreadcrumbPage>
     </BreadcrumbItem>
   </BreadcrumbList>
 </Breadcrumb>
+
+<Image
+  src="/article-thumbnails/the-pitfalls-of-devrel-cover.png"
+  alt="the pitfalls of devrel"
+  width={1500}
+  height={600}
+  className="mb-8"
+/>
 
 # the pitfalls of devrel
 
@@ -34,6 +43,7 @@ so after launching multiple devrel initiatives, grant programs, dev campaigns, a
 ## the essence of devrel
 
 i think at the core, devrel can be split into two major activities:
+
 1. **developer marketing** - this is about distribution, reach, and awareness. it's about getting the word out there and getting people to try your product.
 2. **developer experience** - this is about creating products/platforms that are easy for developers to adopt and want to use. it's about making the developer journey as smooth as possible.
 
@@ -43,7 +53,7 @@ i think most devrel initiatives focus too much on the former and neglect the lat
 
 i think there are two major pitfalls that teams often fall into.
 
-### too rushed for results 
+### too rushed for results
 
 this is the most common pitfall. teams often feel that they are not doing enough or not doing it right if they are not seeing results immediately. then, to fix this, they are rushing to throw more money and people into the problem, hoping that it will work.
 
@@ -77,6 +87,6 @@ i think we need to look beyond our crypto space to find inspiration for building
 
 ## so...
 
-Electric Capital's Developer Report is showing a downward trend in the number of active full time developers in the crypto space. and we are spending more money than ever on devrel. i think we need to take a step back and think about what we are doing.
+[Electric Capital](https://x.com/ElectricCapital)'s Developer Report is showing a downward trend in the number of active full time developers in the crypto space. and we are spending more money than ever on devrel. i think we need to take a step back and think about what we are doing.
 
-hey, if you need some ideas, tag me or just check out buildstation. i think i will share some more on my lessons learned in the next article.
+hey, if you need some ideas, tag me or just check out [buildstation](https://buildstation.org). i think i will share some more on my lessons learned in the next article.

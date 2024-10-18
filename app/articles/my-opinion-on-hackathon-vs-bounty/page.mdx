@@ -6,8 +6,9 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import Image from "next/image"
 
-<Breadcrumb>
+<Breadcrumb className="mb-8">
   <BreadcrumbList>
     <BreadcrumbItem>
       <BreadcrumbLink href="/">home</BreadcrumbLink>
@@ -22,6 +23,14 @@ import {
     </BreadcrumbItem>
   </BreadcrumbList>
 </Breadcrumb>
+
+<Image
+  src="/article-thumbnails/my-opinion-on-hackathon-vs-bounty-cover.png"
+  alt="the pitfalls of devrel"
+  width={1500}
+  height={600}
+  className="mb-8"
+/>
 
 # my opinion on hackathon vs. bounty
 
