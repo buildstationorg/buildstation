@@ -8,7 +8,7 @@ export default function A({
   return (
     <a
       href={href}
-      className="font-medium text-blue-400 underline underline-offset-4"
+      className="font-medium text-blue-500 underline underline-offset-4"
     >
       {children}
     </a>
