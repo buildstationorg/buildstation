@@ -31,7 +31,7 @@ export default function HomeMenu() {
         <div className="flex flex-col divide-y-2 divide-primary">
           <div className="flex flex-col gap-4 text-left p-10">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-              Awesome Buildstation
+              awesome buildstation
             </h2>
             <p>
               An opinionated list of awesome projects contributed by the
