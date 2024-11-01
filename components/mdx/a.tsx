@@ -10,10 +10,10 @@ export default function A({
     <a
       href={href}
       target="_blank"
-      className="flex flex-row items-center font-medium text-blue-500 underline underline-offset-4"
+      className="w-fit items-center font-medium text-blue-500 underline underline-offset-4"
     >
       {children}
-      <ExternalLink className="w-4 h-4 ml-2" />
+      <ExternalLink className="inline w-4 h-4 ml-2" />
     </a>
   );
 }
