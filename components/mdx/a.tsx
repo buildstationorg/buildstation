@@ -1,3 +1,4 @@
+import { ExternalLink } from "lucide-react";
 export default function A({
   children,
   href,
@@ -9,9 +10,10 @@ export default function A({
     <a
       href={href}
       target="_blank"
-      className="font-medium text-blue-500 underline underline-offset-4"
+      className="flex flex-row items-center font-medium text-blue-500 underline underline-offset-4"
     >
       {children}
+      <ExternalLink className="w-4 h-4 ml-2" />
     </a>
   );
 }

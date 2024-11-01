@@ -12,10 +12,10 @@ export default function HomeMenu() {
       <div className="grid grid-cols-1 md:grid-cols-2 divide-y-2 md:divide-y-0 md:divide-x-2 divide-primary">
         <div className="grow text-left p-10">
           <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">
-            go to HQ
+            Grants
           </h2>
           <p>
-            be the main character in your own legacy
+            Explore our grants program and apply
           </p>
           <Button
             className="w-fit p-6 mt-8"
@@ -23,18 +23,18 @@ export default function HomeMenu() {
             size="icon"
             asChild
           >
-            <a href="https://hq.buildstation.org">
+            <Link href="/grants">
               <ArrowRight className="h-6 w-6" />
-            </a>
+            </Link>
           </Button>
         </div>
         <div className="flex flex-col divide-y-2 divide-primary">
           <div className="flex flex-col gap-4 text-left p-10">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-              awesome buildstation
+              Awesome Buildstation
             </h2>
             <p>
-              an opinionated list of awesome projects contributed by the
+              An opinionated list of awesome projects contributed by the
               community
             </p>
             <Button
@@ -50,9 +50,9 @@ export default function HomeMenu() {
           </div>
           <div className="flex flex-col gap-4 text-left p-10">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-              learn
+              Learn
             </h2>
-            <p>explore our learning resources and courses</p>
+            <p>Explore our learning resources and courses</p>
             <Button
               className="w-fit p-6 mt-8"
               variant="outline"
@@ -68,9 +68,9 @@ export default function HomeMenu() {
       </div>
       <div className="flex flex-col text-left p-10">
         <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">
-          devrel playbook
+          DevRel playbook
         </h2>
-        <p>learn about how to build a thriving ecosystem of builders</p>
+        <p>Learn about how to build a thriving ecosystem of builders</p>
         <Button
           className="w-fit p-6 mt-8"
           variant="outline"
@@ -85,9 +85,9 @@ export default function HomeMenu() {
       <div className="grid grid-cols-1 md:grid-cols-3 divide-y-2 md:divide-x-2 md:divide-y-0 divide-primary">
         <div className="flex flex-col text-left p-10">
           <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">
-            videos
+            Videos
           </h2>
-          <p>explore our videos</p>
+          <p>Explore our videos</p>
           <Button
             className="w-fit p-6 mt-8"
             variant="outline"
@@ -101,9 +101,9 @@ export default function HomeMenu() {
         </div>
         <div className="flex flex-col text-left p-10">
           <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">
-            articles
+            Articles
           </h2>
-          <p>explore our articles</p>
+          <p>Explore our articles</p>
           <Button
             className="w-fit p-6 mt-8"
             variant="outline"
@@ -117,9 +117,9 @@ export default function HomeMenu() {
         </div>
         <div className="flex flex-col text-left p-10">
           <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">
-            events
+            Events
           </h2>
-          <p>explore our events</p>
+          <p>Explore our events</p>
           <Button
             className="w-fit p-6 mt-8"
             variant="outline"
