@@ -70,7 +70,7 @@ export default function HomeMenu() {
         <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">
           devrel playbook
         </h2>
-        <p>learn about our developer relations playbook</p>
+        <p>learn about how to build a thriving ecosystem of builders</p>
         <Button
           className="w-fit p-6 mt-8"
           variant="outline"

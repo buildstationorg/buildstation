@@ -9,6 +9,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'buildstation learn',
@@ -46,15 +47,15 @@ export default function Page() {
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/">home</BreadcrumbLink>
+            <BreadcrumbLink href="/">Home</BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>learn</BreadcrumbPage>
+            <BreadcrumbPage>Learn</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <h1 className="text-3xl md:text-5xl font-bold">learn</h1>
+      <h1 className="text-3xl md:text-5xl font-bold">Learn</h1>
       <div className="flex flex-col gap-8">
         {
           learnTracks.map((track: learnTrack) => (
@@ -62,7 +63,10 @@ export default function Page() {
               <h2 className="text-xl md:text-3xl font-semibold mt-4 border-b pb-2">{track.title}</h2>
               {
                 learnCourses.filter((course: learnCourse) => course.track === track.slug).map((course: learnCourse) => (
-                  <Link className="w-fit" key={course.id} href={course.slug}>{course.title}</Link>
+                  <div className="flex flex-row gap-2 items-center underline underline-offset-4 text-blue-500" key={course.id}>
+                    <a className="w-fit" href={course.slug}>{course.title}</a>
+                    <ExternalLink className="w-4 h-4" />
+                  </div>
                 ))
               }
             </div>

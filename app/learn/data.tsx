@@ -15,55 +15,43 @@ export const learnTracks: learnTrack[] = [
   {
     id: 1,
     slug: 'career-tracks',
-    title: 'career tracks',
+    title: 'Career tracks',
   },
   {
     id: 2,
     slug: 'skill-tracks',
-    title: 'skill tracks',
+    title: 'Skill tracks',
   },
   {
     id: 3,
     slug: 'courses',
-    title: 'courses',
+    title: 'Courses',
   }
 ]
 
 export const learnCourses: learnCourse[] = [
   {
     id: 1,
-    title: 'solidity',
-    slug: '/learn/solidity',
+    title: "Solidity",
+    slug: 'https://github.com/buildstationorg/solidity-bootcamp',
     track: 'courses'
   },
   {
     id: 2,
-    title: 'fullstack evm dapp developer',
-    slug: '/learn/fullstack-evm-dapp-developer',
+    title: 'Fullstack evm dapp developer',
+    slug: 'https://github.com/buildstationorg/evm-dapp-bootcamp',
     track: 'career-tracks'
   },
   {
     id: 3,
-    title: 'rust',
-    slug: '/learn/rust',
+    title: 'Rust',
+    slug: 'https://github.com/buildstationorg/rust-bootcamp',
     track: 'courses'
   },
   {
     id: 4,
-    title: 'cairo',
-    slug: '/learn/cairo',
-    track: 'courses'
-  },
-  {
-    id: 5,
-    title: 'func',
-    slug: '/learn/func',
-    track: 'courses'
-  },
-  {
-    id: 6,
-    title: 'chainlink services',
-    slug: '/learn/chainlink-services',
+    title: 'Foundry training',
+    slug: "https://github.com/buildstationorg/foundry-bootcamp",
     track: 'skill-tracks'
   }
 ]
