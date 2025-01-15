@@ -3,17 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3005",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@mdx-js/loader": "^3.0.1",
-    "@mdx-js/react": "^3.0.1",
-    "@next/mdx": "^14.1.4",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^14.2.23",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
+    "@rainbow-me/rainbowkit": "^2.2.2",
+    "@tanstack/react-query": "^5.64.1",
     "@tanstack/react-table": "^8.17.3",
     "@types/mdx": "^2.0.12",
     "@types/qs": "^6.9.13",
@@ -21,10 +23,11 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.350.0",
-    "next": "^14.2.15",
+    "next": "^15.1.4",
+    "next-mdx-remote": "^5.0.0",
     "qs": "^6.12.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-medium-image-zoom": "^5.1.10",
     "react-syntax-highlighter": "^15.5.0",
     "rehype": "^13.0.1",
@@ -32,7 +35,8 @@
     "simple-icons": "^11.12.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
-    "viem": "^2.17.4"
+    "viem": "^2.22.8",
+    "wagmi": "^2.14.7"
   },
   "devDependencies": {
     "@types/node": "^20",
