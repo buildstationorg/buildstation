@@ -9,12 +9,21 @@ import {
 } from "@rainbow-me/rainbowkit";
 import { trustWallet, ledgerWallet } from "@rainbow-me/rainbowkit/wallets";
 import {
-  // klaytn, // import klaytn mainnet
   kairos, // import kai testnet
 } from "wagmi/chains";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiProvider, http } from "wagmi";
-// import according to docs
+
+//analytics
+import posthog from 'posthog-js'
+import { PostHogProvider } from 'posthog-js/react'
+
+if (typeof window !== 'undefined') {
+  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
+    api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST!,
+    person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+  })
+}
 
 const { wallets } = getDefaultWallets();
 // initialize and destructure wallets object
@@ -53,7 +62,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
             overlayBlur: "none",
           })}
         >
-          {children}
+          <PostHogProvider client={posthog}>
+            {children}
+          </PostHogProvider>
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
