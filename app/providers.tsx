@@ -50,22 +50,22 @@ const queryClient = new QueryClient();
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <WagmiProvider config={config}>
-      <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider
-          theme={lightTheme({
-            accentColor: "#0F172A",
-            accentColorForeground: "white",
-            borderRadius: "small",
-            fontStack: "system",
-            overlayBlur: "none",
-          })}
-        >
-          <PostHogProvider client={posthog}>
-            {children}
-          </PostHogProvider>
-        </RainbowKitProvider>
-      </QueryClientProvider>
-    </WagmiProvider>
+    <PostHogProvider client={posthog}>
+      <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
+          <RainbowKitProvider
+            theme={lightTheme({
+              accentColor: "#0F172A",
+              accentColorForeground: "white",
+              borderRadius: "small",
+              fontStack: "system",
+              overlayBlur: "none",
+            })}
+          >
+              {children}
+          </RainbowKitProvider>
+        </QueryClientProvider>
+      </WagmiProvider>
+    </PostHogProvider>
   );
 }
