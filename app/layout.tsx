@@ -4,6 +4,7 @@ import "./globals.css";
 import SiteHeader from "@/components/site-header";
 import type { Metadata } from 'next'
 import Footer from "@/components/footer";
+import { Providers } from '@/app/providers';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,15 +46,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <main className="flex flex-col items-center p-6 md:p-10 pb-12 font-mono">
-          <div className="flex flex-col gap-24 max-w-7xl w-full items-center">
+      <Providers>
+        <body className={inter.className}>
+          <main className="flex flex-col items-center p-6 md:p-10 pb-12 font-mono">
+            <div className="flex flex-col gap-24 max-w-7xl w-full items-center">
             <SiteHeader />
               {children}
             <Footer />
           </div>
-        </main>
-      </body>
+          </main>
+        </body>
+      </Providers>
     </html>
   );
 }
