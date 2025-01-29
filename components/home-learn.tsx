@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import EnterKey from "@/components/enter-key";
 
 export default function HomeLearn() {
@@ -19,7 +16,6 @@ export default function HomeLearn() {
           <EnterKey href="/learn" />
         </div>
       </div>
-
     </div>
   )
 }

@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import EnterKey from "@/components/enter-key";
 
 export default function HomeAwesomeBuildstation() {
@@ -20,7 +17,6 @@ export default function HomeAwesomeBuildstation() {
           <EnterKey href="/awesome-buildstation" />
         </div>
       </div>
-
     </div>
   )
 }
