@@ -48,12 +48,10 @@ export default function RootLayout({
     <html lang="en">
       <Providers>
         <body className={inter.className}>
-          <main className="flex flex-col items-center p-6 md:p-10 pb-12 font-mono">
-            <div className="flex flex-col gap-24 max-w-7xl w-full items-center">
+          <main className="flex flex-col gap-12 items-center p-6 md:p-10 pb-12 font-mono">
             <SiteHeader />
               {children}
             <Footer />
-          </div>
           </main>
         </body>
       </Providers>
