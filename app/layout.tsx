@@ -46,15 +46,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Providers>
-        <body className={inter.className}>
+      <body className={inter.className}>
+        <Providers>
           <main className="flex flex-col gap-12 items-center p-6 md:p-10 pb-12 font-mono">
             <SiteHeader />
               {children}
             <Footer />
           </main>
-        </body>
-      </Providers>
+        </Providers>
+      </body>
     </html>
   );
 }
