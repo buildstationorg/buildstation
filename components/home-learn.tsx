@@ -2,23 +2,22 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-export default function HomeAwesomeBuildstation() {
+export default function HomeLearn() {
   return (
     <div className="flex flex-col gap-4 text-left border-2 border-primary">
       <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight bg-primary text-secondary p-2">
-        $ awesome_buildstation
+        $ learn
       </h2>
       <div className="flex flex-col gap-4 p-4">
         <p className="text-md">
-          An opinionated list of awesome projects contributed by the
-          community
+          Explore our learning resources and courses
         </p>
         <Button
           className="w-fit"
           variant="outline"
           asChild
         >
-          <Link href="/awesome-buildstation">
+          <Link href="/learn">
             <ArrowRight className="h-4 w-4" />
           </Link>
         </Button>
