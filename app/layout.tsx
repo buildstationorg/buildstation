@@ -1,10 +1,11 @@
-import Script from 'next/script'
 import { Inter } from "next/font/google";
 import "./globals.css";
+import '@rainbow-me/rainbowkit/styles.css';
 import SiteHeader from "@/components/site-header";
 import type { Metadata } from 'next'
 import Footer from "@/components/footer";
 import { Providers } from '@/app/providers';
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,15 +46,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Providers>
-          <main className="flex flex-col gap-12 items-center p-6 md:p-10 pb-12 font-mono">
-            <SiteHeader />
-              {children}
-            <Footer />
-          </main>
-        </Providers>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Providers>
+            <main className="flex flex-col gap-12 items-center p-6 md:p-10 pb-12 font-mono">
+              <SiteHeader />
+                {children}
+              <Footer />
+            </main>
+          </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );

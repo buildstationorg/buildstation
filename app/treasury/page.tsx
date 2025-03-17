@@ -85,7 +85,7 @@ export default async function Page() {
         </h2>
         <p>{formatEther(scrollBalance)} SCR</p>
         <a
-          href="https://scrollscan/address/0xc14c279967cd712FFEEDcFD4e56C845216b5042D"
+          href="https://scrollscan.com/address/0xc14c279967cd712FFEEDcFD4e56C845216b5042D"
           target="_blank"
           className="flex flex-row items-center underline underline-offset-2 text-blue-500 w-fit"
         >
