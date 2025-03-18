@@ -1,0 +1,33 @@
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import Image from "next/image";
+
+<Breadcrumb className="mb-8">
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/videos">Videos</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage>Zero to One</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+
+# Zero to One series
+
+## Intro
+A livestream series where we go through the process of building products from scratch.
+
+## Watch on Youtube
+[buildstation Zero to One](https://youtube.com/playlist?list=PLUCXw2ganKWWCMguBIUhK1L7dS9jeTcKY&si=rl8fn1_7j1YvzJ73)

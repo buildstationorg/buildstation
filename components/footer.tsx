@@ -14,7 +14,7 @@ export default function Footer() {
               <Button className="w-fit">
                 <a className="flex flex-row gap-2 items-center" href="https://t.me/buildstation" target='blank'>Go to group chat <ExternalLink className="w-4 h-4" /></a>
               </Button>
-              <a className="flex flex-row gap-2 items-center underline underline-offset-2" target='blank' href="https://t.me/buildstationfeed"><Rss className="w-4 h-4" />Feed</a>
+              <a className="flex flex-row gap-2 items-center underline underline-offset-2" target='blank' href="https://x.com/buildstationorg"><Rss className="w-4 h-4" />Feed</a>
             </div>
           </div>
           <div className="border border-primary p-10 grow">
