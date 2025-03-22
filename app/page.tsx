@@ -5,8 +5,8 @@ export default function Home() {
   const menuItems = [
     {
       id: 2,
-      name: 'awesome_buildstation',
-      url: '/awesome-buildstation'
+      name: 'buildStack',
+      url: '/buildstack'
     },
     {
       id: 3,

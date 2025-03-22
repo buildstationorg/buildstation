@@ -9,16 +9,34 @@ import {
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 
-export default function ArticlesPage() {
+export default function BuildStackPage() {
   const menuItems = [
     {
       id: 1,
-      name: 'Zero to One',
-      url: 'https://youtube.com/playlist?list=PLUCXw2ganKWWCMguBIUhK1L7dS9jeTcKY&si=Y3_u2KXPBbST6Omr'
+      name: 'EthUI',
+      url: 'https://ethui.buildstation.org'
+    },
+    {
+      id: 2,
+      name: 'DotUI',
+      url: 'https://dotui.buildstation.org'
+    },
+    {
+      id: 3,
+      name: 'GmGn Wallet',
+      url: 'https://gmgn.app'
+    },
+    {
+      id: 4,
+      name: 'SigpassKit',
+      url: 'https://sigpasskit.com'
+    },
+    {
+      id: 5,
+      name: 'BlockCMD inspect contracts',
+      url: 'https://blockcmd.com'
     },
   ];
-
-
   return (
     <div className="flex flex-col gap-8">
       <Breadcrumb>
@@ -28,7 +46,7 @@ export default function ArticlesPage() {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Articles</BreadcrumbPage>
+            <BreadcrumbPage>buildStack</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
@@ -36,11 +54,11 @@ export default function ArticlesPage() {
       <div className="flex flex-col gap-4 w-full md:w-5/6 text-left">
         <div className="flex flex-row gap-2 items-center">
           <span className="text-sm bg-primary text-secondary font-bold px-2 py-1">$</span>
-          <h1 className="text-md font-bold">Articles</h1>
+          <h1 className="text-md font-bold">buildStack</h1>
         </div>
-        <h1 className="text-xl md:text-3xl font-bold">Condensed knowledge</h1>
+        <h1 className="text-xl md:text-3xl font-bold">Accelerate your build</h1>
         <div className="flex flex-col gap-12 mt-4">
-          <p className="text-md">A collection of thoughts, ideas, experiences and more to help inspire and inform you.</p>
+          <p className="text-md">An opinionated list of awesome projects built or contributed by the buildstation community.</p>
         </div>
       </div>
       <div className="flex flex-col border-2 border-primary gap-2 pb-8">
@@ -49,7 +67,7 @@ export default function ArticlesPage() {
           <p className="text-md">_</p>
         </div>
         <div className="flex flex-col px-4 py-2">
-          <h2 className="text-md">$ cat articles.md</h2>
+          <h2 className="text-md">$ cat buildStack.md</h2>
           <div className="flex flex-col gap-2 mt-4 pl-8">
             {menuItems.map((item) => (
               <Link 
