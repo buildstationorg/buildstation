@@ -44,11 +44,11 @@ export default function EventsPage() {
       <div className="flex flex-col gap-4 w-full md:w-5/6 text-left">
         <div className="flex flex-row gap-2 items-center">
           <span className="text-sm bg-primary text-secondary font-bold px-2 py-1">$</span>
-          <h1 className="text-md font-bold">Videos</h1>
+          <h1 className="text-md font-bold">Events</h1>
         </div>
-        <h1 className="text-xl md:text-3xl font-bold">Raw and unfilted</h1>
+        <h1 className="text-xl md:text-3xl font-bold">Good vibes only!</h1>
         <div className="flex flex-col gap-12 mt-4">
-          <p className="text-md">You can find a collection of livestreams, discussions, tutorials and more.</p>
+          <p className="text-md">Explore the many events hosted by friends, partners and members of buildstation.</p>
         </div>
       </div>
       <div className="flex flex-col border-2 border-primary gap-2 pb-8">
