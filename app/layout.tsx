@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import '@rainbow-me/rainbowkit/styles.css';
 import SiteHeader from "@/components/site-header";
@@ -7,8 +7,7 @@ import Footer from "@/components/footer";
 import { Providers } from '@/app/providers';
 import { ThemeProvider } from "@/components/theme-provider"
 
-const inter = Inter({ subsets: ["latin"] });
-
+const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'buildstation',
@@ -47,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={jetBrainsMono.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
