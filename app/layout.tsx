@@ -54,7 +54,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Providers>
-            <main className="flex flex-col gap-12 items-center p-6 md:p-10 pb-12 font-mono">
+            <main className="flex flex-col gap-12 items-center p-6 md:p-10 pb-12">
               <SiteHeader />
                 {children}
               <Footer />

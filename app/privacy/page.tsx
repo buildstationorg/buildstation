@@ -453,7 +453,7 @@ export default function Page() {
               rel="noopener noreferrer"
               className="text-blue-500 underline"
             >
-              team@buildstation.org
+              core@buildstation.org
             </a>
           </p>
         </li>
