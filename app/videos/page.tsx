@@ -54,6 +54,7 @@ export default function VideosPage() {
                 key={item.id} 
                 href={item.url}
                 className="group relative text-muted-foreground hover:text-primary hover:underline cursor-pointer flex items-center"
+                target="_blank"
               >
                 <ChevronRight className="absolute -left-9 opacity-0 group-hover:opacity-100 my-auto" size={16} />
                 {item.name}
