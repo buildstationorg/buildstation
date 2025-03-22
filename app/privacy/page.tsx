@@ -451,7 +451,7 @@ export default function Page() {
               href="mailto:core@buildstation.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 underline"
+              className="dark:text-blue-400 text-blue-500 underline underline-offset-4"
             >
               core@buildstation.org
             </a>
