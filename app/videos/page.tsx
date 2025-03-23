@@ -7,6 +7,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import TerminalMenu from "@/components/terminal-menu";
+import KeyboardNav from "@/components/keyboard-nav";
 
 export default function VideosPage() {
   const menuItems = [
@@ -16,6 +17,15 @@ export default function VideosPage() {
       url: "https://youtube.com/playlist?list=PLUCXw2ganKWWCMguBIUhK1L7dS9jeTcKY&si=Y3_u2KXPBbST6Omr",
     },
   ];
+
+  const keyboardNavItems = [
+    {
+      keyboard: "1",
+      description: "Videos",
+      url: "/videos",
+    },
+  ];
+  
   return (
     <div className="flex flex-col gap-8">
       <Breadcrumb>
@@ -56,6 +66,7 @@ export default function VideosPage() {
           </div>
         </div>
       </div>
+      <KeyboardNav keyboardNavItems={keyboardNavItems} />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import TerminalMenu from '@/components/terminal-menu';
+import KeyboardNav from '@/components/keyboard-nav';
 
 export default function Home() {
   const menuItems = [
@@ -39,6 +40,44 @@ export default function Home() {
     }
   ];
 
+  const keyboardNavItems = [
+    {
+      keyboard: '1',
+      description: 'Sections',
+      url: '/buildstack'
+    },
+    {
+      keyboard: '2',
+      description: 'Sections',
+      url: '/grants'
+    },
+    {
+      keyboard: '3',
+      description: 'Sections',
+      url: '/learn'
+    },
+    {
+      keyboard: '4',
+      description: 'Sections',
+      url: '/devrel-playbook'
+    },
+    {
+      keyboard: '5',
+      description: 'Sections',
+      url: '/videos'
+    },
+    {
+      keyboard: '6',
+      description: 'Sections',
+      url: '/articles'
+    },
+    {
+      keyboard: '7',
+      description: 'Sections',
+      url: '/events'
+    }
+  ];
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
       <div className="flex flex-col gap-4 w-full md:w-5/6 text-left">
@@ -63,6 +102,7 @@ export default function Home() {
           <TerminalMenu menuItems={menuItems} />
         </div>
       </div>
+      <KeyboardNav keyboardNavItems={keyboardNavItems} />
     </div>
   );
 }
