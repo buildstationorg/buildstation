@@ -7,7 +7,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-export default function Page() {
+export default function OurStoryPage() {
   return (
     <div className="flex flex-col gap-24 w-full">
       <Breadcrumb>
