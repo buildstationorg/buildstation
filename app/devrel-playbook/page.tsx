@@ -44,11 +44,12 @@ export default function DevrelPlaybook() {
             </span>
             <h1 className="text-md font-bold">DevRel playbook</h1>
           </div>
-          <h1 className="text-xl md:text-3xl font-bold">Initialize a dev community</h1>
+          <h1 className="text-xl md:text-3xl font-bold">Initialize community</h1>
           <div className="flex flex-col gap-12 mt-4">
             <p className="text-md">Bootstrapping a developer community takes time, resources, and a lot of trial and error. That&apos;s why we&apos;re building a framework to help you get started.</p>
             <p className="text-md">Ecosystems can leverage the stack and buildstation community to grow their developer ecosystem.</p>
             <p className="text-md">Developers can access the resources they need to grow and scale their projects.</p>
+            <p className="text-md">We only ask that if you used this playbook, please reach out to us for collaboration or give attribution to buildstation in your campaign.</p>
           </div>
         </div>
         <div className="flex flex-col border-2 border-primary gap-2 pb-8">
@@ -62,20 +63,7 @@ export default function DevrelPlaybook() {
           </div>
         </div>
       </div>
-      <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
-      <p className="mb-6">This repository is a collection of concepts, strategies and experiements that the buildstation core team and community have undertaken over the years. Feel free to use this as guideance for your. We only ask that if you used this playbook, please reach out to us for collaboration or give attribution to buildstation in your campaign. The community continuously innovates new things which will be updated in this repository over time.</p>
-
-      <h2 className="text-2xl font-semibold mb-4">What this repository is not</h2>
-      <p className="mb-6">This repository is freely available to everyone but it does not mean that buildstation is a marketing agency. The core team does not take marketing job requests, nor we are interested in doing so. We are a community of passionate developers that want to elevate the global hacker movement and shape the future of finance.</p>
-
-      <h2 className="text-2xl font-semibold mb-4">Current problems</h2>
-      <p className="mb-4">Many L1/L2 ecosystems are struggling to attract developers to build on their platforms. Worse, they also usually encounter:</p>
-      <ul className="list-disc pl-6 mb-6">
-        <li className="mb-2">Many grifters/grift agencies always offer solutions that are unrealistic, unsustainable, and costly (especially if the foundation is giving them money) without being able to deliver any tangible results.</li>
-        <li className="mb-2">Hackathons don't work as well as they used to be. They are expensive to run, hackathon winners usually don't continue building after the hackathon ends, and hackathons often exclude vast amount of developers that are too busy to participate because of their day jobs.</li>
-        <li className="mb-2">Scammy/soft-rug projects that always demand big grants without actually delivering any products or services.</li>
-        <li className="mb-2">Lack of defined tracking metrics, accountability and transparency in the ecosystem, especially in the various incentive programs to builders.</li>
-      </ul>
+      
 
       <h2 className="text-2xl font-semibold mb-4">Proposed solutions</h2>
       <p className="mb-4">Recognizing the problems, buildstation has pioneered and tested various solutions to help all ecosystems to grow their builder base in a sustainable manner, which includes:</p>
@@ -110,11 +98,6 @@ export default function DevrelPlaybook() {
         <li className="mb-2"><a href="/devrel-playbook/builder-program" className="text-blue-500 hover:underline">builder program</a></li>
         <li className="mb-2"><a href="/devrel-playbook/developer-bootcamp" className="text-blue-500 hover:underline">developer bootcamp</a></li>
         <li className="mb-2"><a href="/devrel-playbook/hacker-house" className="text-blue-500 hover:underline">hacker house</a></li>
-      </ul>
-
-      <h3 className="text-xl font-semibold mb-4">OSS</h3>
-      <ul className="list-disc pl-6">
-        <li><a href="/awesome-buildstation" className="text-blue-500 hover:underline">awesome-buildstation</a></li>
       </ul>
     </div>
   )

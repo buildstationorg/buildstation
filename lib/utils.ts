@@ -6,6 +6,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+export function slugify(text: string) {
+  return text.toLowerCase().replace(/ /g, "-");
+}
+
 export function helperSearch(
   query: string,
   node: EachRoute,

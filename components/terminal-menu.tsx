@@ -1,7 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
-interface MenuItem {
+export interface MenuItem {
   id: number;
   name: string;
   url: string;
