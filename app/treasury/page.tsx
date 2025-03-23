@@ -7,6 +7,10 @@ import { CopyButton } from "@/components/copy-button";
 import TerminalMenu from "@/components/terminal-menu";
 import KeyboardNav from "@/components/keyboard-nav";
 import TerminalContent, { TerminalContentProps } from "@/components/terminal-content";
+import { 
+  useBalance,
+  useReadContract,
+} from "wagmi";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -15,7 +19,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-
+import { arbitrum, scroll } from "wagmi/chains";
 
 export default function TreasuryPage() {
 
@@ -23,6 +27,25 @@ export default function TreasuryPage() {
     title: "",
     contents: [],
   });
+
+  const { data: arbEthBalance, isLoading: arbLoading } = useBalance({
+    address: '0xc14c279967cd712FFEEDcFD4e56C845216b5042D',
+    chainId: arbitrum.id,
+    query: {
+      enabled: terminalContent.title === "arbitrum",
+    },
+  })
+
+  const { data: scrollBalance, isLoading: scrollLoading } = useReadContract({
+    address: '0xd29687c813D741E2F938F4aC377128810E217b1b',
+    chainId: scroll.id,
+    abi: erc20Abi,
+    functionName: 'balanceOf',
+    args: ['0xc14c279967cd712FFEEDcFD4e56C845216b5042D'],
+    query: {
+      enabled: terminalContent.title === "scroll",
+    },
+  })
 
   const menuItems = [
     {
@@ -34,9 +57,23 @@ export default function TreasuryPage() {
 
   const terminalContentList = [
     {
-      title: "arbitrum",
-      contents: ["0 ETH"],
+      title: "scroll",
+      contents: [
+        "0 SCR"
+      ],
     },
+    {
+      title: "arbitrum",
+      contents: [
+        "ETH"
+      ],
+    },
+    {
+      title: "donate",
+      contents: [
+        "ETH"
+      ],
+    }
   ];
 
   const keyboardNavItems = [
@@ -48,7 +85,7 @@ export default function TreasuryPage() {
   ];
 
   function handleTerminalContentClick(title: string) {
-    const content = terminalContentList.find((item) => item.title === `${title}.md`);
+    const content = terminalContentList.find((item) => item.title === `${title}`);
     if (content) {
       setTerminalContent(content);
     }
@@ -81,12 +118,12 @@ export default function TreasuryPage() {
               Turns out, blockchain is great for tracking treasury activities. You can see our balances of the treasury on all chains.
             </p>
             <div className="flex flex-col gap-4">
-              <button onClick={() => handleTerminalContentClick("grifters")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
+              <button onClick={() => handleTerminalContentClick("arbitrum")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
                 <ChevronRight className="w-6 h-6 mr-2" />
                 Arbitrum
                 <MousePointerClick className="w-4 h-4 ml-2" />
               </button>
-              <button onClick={() => handleTerminalContentClick("hackathon-trap")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
+              <button onClick={() => handleTerminalContentClick("scroll")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
                 <ChevronRight className="w-6 h-6 mr-2" />
                 Scroll
                 <MousePointerClick className="w-4 h-4 ml-2" />
@@ -109,9 +146,31 @@ export default function TreasuryPage() {
             <h1 className="text-lg md:text-xl font-bold">Terminal</h1>
             <p className="text-md">_</p>
           </div>
-          <div className="flex flex-col px-4 py-2">
-            <h2 className="text-md">$ cat videos.md</h2>
-            <TerminalMenu menuItems={menuItems} />
+          <div className="flex flex-col gap-4 px-4 py-2">
+            <h2 className="text-md">
+              {terminalContent.title ? (
+                `$ curl https://buildstation.org/${terminalContent.title}`
+              ) : (
+                <span>$ <span className="text-muted-foreground">click <MousePointerClick className="inline w-4 h-4 ml-2" /> to view balance</span></span>
+              )}
+            </h2>
+            {terminalContent.title === "arbitrum" ? (
+              arbLoading ? (
+                <p className="text-muted-foreground">⠋ Loading...</p>
+              ) : (
+                <p className="text-muted-foreground">
+                  {'>'} {formatEther(arbEthBalance?.value || BigInt(0))} ETH
+                </p>
+              )
+            ) : terminalContent.title === "scroll" ? (
+              scrollLoading ? (
+                <p className="text-muted-foreground">⠋ Loading...</p>
+              ) : (
+                <p className="text-muted-foreground">
+                  {'>'} {formatEther(scrollBalance || BigInt(0))} SCR
+                </p>
+              )
+            ) : null}
           </div>
         </div>
       </div>
