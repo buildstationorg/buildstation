@@ -5,9 +5,8 @@ import remarkGfm from "remark-gfm";
 import rehypePrism from "rehype-prism-plus";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
-// @ts-expect-error - rehype-code-titles lacks type definitions
 import rehypeCodeTitles from "rehype-code-titles";
-import { page_routes, ROUTES } from "./routes-config";
+import { page_routes, ROUTES } from "@/lib/routes-config";
 import { visit } from "unist-util-visit";
 import matter from "gray-matter";
 

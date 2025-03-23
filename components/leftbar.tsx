@@ -5,12 +5,12 @@ import {
   SheetHeader,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Logo, NavMenu } from "./navbar";
-import { Button } from "./ui/button";
+import { Logo, NavMenu } from "@/components/navbar";
+import { Button } from "@/components/ui/button";
 import { AlignLeftIcon } from "lucide-react";
-import { DialogTitle } from "./ui/dialog";
+import { DialogTitle } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import DocsMenu from "./docs-menu";
+import DocsMenu from "@/components/docs-menu";
 
 export function Leftbar() {
   return (

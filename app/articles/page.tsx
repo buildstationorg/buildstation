@@ -13,8 +13,13 @@ export default function ArticlesPage() {
   const menuItems = [
     {
       id: 1,
-      name: 'Zero to One',
-      url: 'https://youtube.com/playlist?list=PLUCXw2ganKWWCMguBIUhK1L7dS9jeTcKY&si=Y3_u2KXPBbST6Omr'
+      name: 'My opinion on hackathon vs bounty',
+      url: '/blog/my-opinion-on-hackathon-vs-bounty'
+    },
+    {
+      id: 2,
+      name: 'the pitfalls of devrel',
+      url: '/blog/the-pitfalls-of-devrel'
     },
   ];
 
