@@ -5,7 +5,11 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-10 w-full text-left">
+    <footer className="flex flex-col w-full text-left">
+      <div className="flex flex-row justify-between items-center bg-primary border-t border-primary text-secondary px-2 font-bold">
+        <div>Footer</div>
+        <div>_</div>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 border-2 border-primary">
         <div className="flex flex-col">
           <div className="flex flex-col gap-4 border border-primary p-10">
@@ -66,7 +70,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-sm text-muted-foreground text-center">buildstation is a <span className="text-gray-400">community initiative</span></div>
     </footer>
   );
 }

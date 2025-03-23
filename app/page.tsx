@@ -49,9 +49,9 @@ export default function Home() {
         </div>
         <h1 className="text-xl md:text-3xl font-bold">The Onchain Developer Framework</h1>
         <div className="flex flex-col gap-12 mt-4">
-          <p className="text-md">Bootstrapping a developer community takes time, resources, and a lot of trial and error. That&apos;s why we&apos;re building a framework to help you get started.</p>
-          <p className="text-md">Ecosystems can leverage the stack and buildstation community to grow their developer ecosystem.</p>
-          <p className="text-md">Developers can access the resources they need to grow and scale their projects.</p>
+          <p className="text-md">High quality, open source, open code software for onchain developers. Design, build and launch your best DApp from scratch.</p>
+          <p className="text-md">Join a vibrant builder community to learn, ask questions, and get help. Get the guidance to start and iterate your product with the community feedbacks.</p>
+          <p className="text-md">Founded upon the cypherpunk ethos of privacy, security, and freedom.</p>
         </div>
       </div>
       <div className="flex flex-col border-2 border-primary gap-2 pb-8">
