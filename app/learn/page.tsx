@@ -6,8 +6,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import Link from "next/link"
-import { ChevronRight } from "lucide-react"
+import TerminalMenu from "@/components/terminal-menu"
 
 export default function LearnPage() {
 
@@ -55,19 +54,7 @@ export default function LearnPage() {
         </div>
         <div className="flex flex-col px-4 py-2">
           <h2 className="text-md">$ cat learn.md</h2>
-          <div className="flex flex-col gap-2 mt-4 pl-8">
-            {menuItems.map((item) => (
-              <Link 
-                key={item.id} 
-                href={item.url}
-                className="group relative text-muted-foreground hover:text-primary hover:underline cursor-pointer flex items-center"
-                target="_blank"
-              >
-                <ChevronRight className="absolute -left-9 opacity-0 group-hover:opacity-100 my-auto" size={16} />
-                {item.name}
-              </Link>
-            ))}
-          </div>
+          <TerminalMenu menuItems={menuItems} />
         </div>
       </div>
       </div>

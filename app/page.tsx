@@ -1,40 +1,39 @@
-import { ChevronRight } from 'lucide-react';
-import Link from 'next/link';
+import TerminalMenu from '@/components/terminal-menu';
 
 export default function Home() {
   const menuItems = [
     {
-      id: 2,
+      id: 1,
       name: 'buildStack',
       url: '/buildstack'
     },
     {
-      id: 3,
+      id: 2,
       name: 'Grants',
       url: '/grants'
     },
     {
-      id: 4,
+      id: 3,
       name: 'Learn',
       url: '/learn'
     },
     {
-      id: 5,
+      id: 4,
       name: 'DevRel playbook',
       url: '/devrel-playbook'
     },
     {
-      id: 6,
+      id: 5,
       name: 'Videos',
       url: '/videos'
     },
     {
-      id: 7,
+      id: 6,
       name: 'Articles',
       url: '/articles'
     },
     {
-      id: 8,
+      id: 7,
       name: 'Events',
       url: '/events'
     }
@@ -60,19 +59,8 @@ export default function Home() {
           <p className="text-md">_</p>
         </div>
         <div className="flex flex-col px-4 py-2">
-          <h2 className="text-md">$ cat BUILD.md</h2>
-          <div className="flex flex-col gap-2 mt-4 pl-8">
-            {menuItems.map((item) => (
-              <Link 
-                key={item.id} 
-                href={item.url}
-                className="group relative text-muted-foreground hover:text-primary hover:underline cursor-pointer flex items-center"
-              >
-                <ChevronRight className="absolute -left-9 opacity-0 group-hover:opacity-100 my-auto" size={16} />
-                {item.name}
-              </Link>
-            ))}
-          </div>
+          <h2 className="text-md">$ cat build.md</h2>
+          <TerminalMenu menuItems={menuItems} />
         </div>
       </div>
     </div>

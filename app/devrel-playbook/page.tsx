@@ -6,8 +6,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import Link from "next/link"
-import { ChevronRight } from "lucide-react"
+import TerminalMenu from "@/components/terminal-menu"
 
 export default function DevrelPlaybook() {
 
@@ -16,7 +15,12 @@ export default function DevrelPlaybook() {
       id: 1,
       name: "Videos",
       url: "/devrel-playbook/videos"
-    }
+    },
+    {
+      id: 2,
+      name: "Videos",
+      url: "/devrel-playbook/videos"
+    },
   ]
 
   return (
@@ -40,7 +44,7 @@ export default function DevrelPlaybook() {
             </span>
             <h1 className="text-md font-bold">DevRel playbook</h1>
           </div>
-          <h1 className="text-xl md:text-3xl font-bold">Bootstrap a dev community</h1>
+          <h1 className="text-xl md:text-3xl font-bold">Initialize a dev community</h1>
           <div className="flex flex-col gap-12 mt-4">
             <p className="text-md">Bootstrapping a developer community takes time, resources, and a lot of trial and error. That&apos;s why we&apos;re building a framework to help you get started.</p>
             <p className="text-md">Ecosystems can leverage the stack and buildstation community to grow their developer ecosystem.</p>
@@ -53,30 +57,11 @@ export default function DevrelPlaybook() {
             <p className="text-md">_</p>
           </div>
           <div className="flex flex-col px-4 py-2">
-            <h2 className="text-md">$ cat videos.md</h2>
-            <div className="flex flex-col gap-2 mt-4 pl-8">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.id}
-                  href={item.url}
-                  className="group relative text-muted-foreground hover:text-primary hover:underline cursor-pointer flex items-center"
-                  target="_blank"
-                >
-                  <ChevronRight
-                    className="absolute -left-9 opacity-0 group-hover:opacity-100 my-auto"
-                    size={16}
-                  />
-                  {item.name}
-                </Link>
-              ))}
-            </div>
+            <h2 className="text-md">$ cat devrel.md</h2>
+            <TerminalMenu menuItems={menuItems} />
           </div>
         </div>
       </div>
-
-      <h1 className="text-4xl font-bold mb-6">Devrel playbook overview</h1>
-      <p className="mb-8">A playbook on how to build a thriving ecosystem of builders.</p>
-
       <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
       <p className="mb-6">This repository is a collection of concepts, strategies and experiements that the buildstation core team and community have undertaken over the years. Feel free to use this as guideance for your. We only ask that if you used this playbook, please reach out to us for collaboration or give attribution to buildstation in your campaign. The community continuously innovates new things which will be updated in this repository over time.</p>
 
