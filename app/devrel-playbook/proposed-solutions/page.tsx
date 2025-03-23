@@ -15,7 +15,7 @@ import TerminalContent, { TerminalContentProps } from "@/components/terminal-con
 import { MenuItem } from "@/components/terminal-menu";
 
 
-export default function CurrentProblemsPage() {
+export default function ProposedSolutionsPage() {
 
   const [terminalContent, setTerminalContent] = useState<TerminalContentProps>({
     title: "",
@@ -24,36 +24,37 @@ export default function CurrentProblemsPage() {
 
   const terminalContentList = [
     {
-      title: "grifters.md",
+      title: "meetup-strategy.md",
       contents: [
         "Many grifters/grift agencies always offer solutions that are unrealistic, unsustainable, and costly (especially if the foundation is giving them money) without being able to deliver any tangible results.",
       ],
     },
     {
-      title: "hackathon-trap.md",
+      title: "builder-program.md",
       contents: [
         "Hackathons don't work as well as they used to be. They are expensive to run, hackathon winners usually don't continue building after the hackathon ends, and hackathons often exclude vast amount of developers that are too busy to participate because of their day jobs."
       ],
     },
     {
-      title: "scammy-projects.md",
+      title: "better-hackathon.md",
       contents: [
         "Scammy/soft-rug projects that always demand big grants without actually delivering any products or services."
       ],
     },
     {
-      title: "lack-of-goals-and-metrics.md",
+      title: "ai-powered-approach.md",
       contents: [
         "Lack of defined tracking metrics, accountability and transparency in the ecosystem, especially in the various incentive programs to builders."
       ],
     }
   ];
 
+
   const menuItems: MenuItem[] = [
     {
       id: 1,
-      name: "Proposed solutions",
-      url: "/devrel-playbook/proposed-solutions",
+      name: "Current problems",
+      url: "/devrel-playbook/current-problems",
     },
     {
       id: 2,
@@ -66,11 +67,11 @@ export default function CurrentProblemsPage() {
     {
       keyboard: "1",
       description: "Sections",
-      url: "/devrel-playbook/proposed-solutions",
+      url: "/devrel-playbook/current-problems",
     },
     {
       keyboard: "2",
-      description: "Case studies",
+      description: "Sections",
       url: "/devrel-playbook/case-studies",
     },
   ];
@@ -95,7 +96,7 @@ export default function CurrentProblemsPage() {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Current problems</BreadcrumbPage>
+            <BreadcrumbPage>Proposed solutions</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
@@ -105,32 +106,32 @@ export default function CurrentProblemsPage() {
             <span className="text-sm bg-primary text-secondary font-bold px-2 py-1">
               $
             </span>
-            <h1 className="text-md font-bold">Current problems</h1>
+            <h1 className="text-md font-bold">Proposed solutions</h1>
           </div>
-          <h1 className="text-xl md:text-3xl font-bold">Everything is a mess</h1>
+          <h1 className="text-xl md:text-3xl font-bold">Patience is the key</h1>
           <div className="flex flex-col gap-12 mt-4">
             <p className="text-md">
-              Many L1/L2 ecosystems are struggling to attract developers to build on their platforms. Worse, they also usually encounter:
+              Recognizing the problems, buildstation has pioneered and tested various solutions to help all ecosystems to grow their builder base in a sustainable manner, which includes:
             </p>
             <div className="flex flex-col gap-4">
               <button onClick={() => handleTerminalContentClick("grifters")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
                 <ChevronRight className="w-6 h-6 mr-2" />
-                Grifters
+                Meetup strategy
                 <MousePointerClick className="w-4 h-4 ml-2" />
               </button>
               <button onClick={() => handleTerminalContentClick("hackathon-trap")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
                 <ChevronRight className="w-6 h-6 mr-2" />
-                Hackathon trap
+                Builder program
                 <MousePointerClick className="w-4 h-4 ml-2" />
               </button>
               <button onClick={() => handleTerminalContentClick("scammy-projects")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
                 <ChevronRight className="w-6 h-6 mr-2" />
-                Scammy projects
+                Better hackathon
                 <MousePointerClick className="w-4 h-4 ml-2" />
               </button>
               <button onClick={() => handleTerminalContentClick("lack-of-goals-and-metrics")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
                 <ChevronRight className="w-6 h-6 mr-2" />
-                Lack of goals and metrics
+                AI powered approach
                 <MousePointerClick className="w-4 h-4 ml-2" />
               </button>
             </div>

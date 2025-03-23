@@ -7,20 +7,44 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import TerminalMenu from "@/components/terminal-menu"
+import KeyboardNav from "@/components/keyboard-nav"
 
 export default function DevrelPlaybook() {
 
   const menuItems = [
     {
       id: 1,
-      name: "Videos",
-      url: "/devrel-playbook/videos"
+      name: "Current problems",
+      url: "/devrel-playbook/current-problems"
     },
     {
       id: 2,
-      name: "Videos",
-      url: "/devrel-playbook/videos"
+      name: "Proposed solutions",
+      url: "/devrel-playbook/proposed-solutions"
     },
+    {
+      id: 3,
+      name: "Case studies",
+      url: "/devrel-playbook/case-studies"
+    }
+  ]
+
+  const keyboardNavItems = [
+    {
+      keyboard: "1",
+      description: "Sections",
+      url: "/devrel-playbook/current-problems"
+    },
+    {
+      keyboard: "2",
+      description: "Sections",
+      url: "/devrel-playbook/proposed-solutions"
+    },
+    {
+      keyboard: "3",
+      description: "Sections",
+      url: "/devrel-playbook/case-studies"
+    }
   ]
 
   return (
@@ -63,42 +87,7 @@ export default function DevrelPlaybook() {
           </div>
         </div>
       </div>
-      
-
-      <h2 className="text-2xl font-semibold mb-4">Proposed solutions</h2>
-      <p className="mb-4">Recognizing the problems, buildstation has pioneered and tested various solutions to help all ecosystems to grow their builder base in a sustainable manner, which includes:</p>
-      <ul className="list-disc pl-6 mb-6">
-        <li className="mb-2">A playbook on how to build a thriving ecosystem of builders.</li>
-        <li className="mb-2">A community of builders that are passionate about building on Web3 to collaborate and share knowledge with each other.</li>
-        <li className="mb-2">A set of tools and resources to help builders to build and ship their products faster.</li>
-      </ul>
-
-      <h2 className="text-2xl font-semibold mb-4">Did it work?</h2>
-      <p className="mb-6">Absolutely! We have seen many builders in our community grow from zero to one, and many of them have contributed greatly into the open source community of different L1/L2 ecosystems. We have also seen many ecosystems grow their builder base and attract more developers to build on their platforms.</p>
-
-      <h3 className="text-xl font-semibold mb-4">Case study 1 with Kaia Vietnam</h3>
-      <ul className="list-disc pl-6 mb-6">
-        <li className="mb-2">Kaia launched a series of weekly mini meetups in Vietnam to attract more developers to build on their platform. The mini meetups were a huge success and attracted many developers to build on Klaytn. Cost for each meetup was less than $50 and the marketing impact was huge.</li>
-        <li className="mb-2">Kaia also created a builder program with Dorahacks to incentivize developers to contribute. The bounty program quickly attracted over 50 developers within its first month to actively contribute to the Klaytn ecosystem. Activites are transparently tracked on GitHub (with Issues, Pull Requests and Discussion topics).</li>
-        <li className="mb-2">Builder program created more impact to Kaia ecosystem than the previous Hackathon event (Klaymakers23) in terms of developer engagement and contributions.</li>
-      </ul>
-
-      <h3 className="text-xl font-semibold mb-4">Case study 2 with Solana Superteam Vietnam</h3>
-      <ul className="list-disc pl-6 mb-6">
-        <li className="mb-2">Superteam launched a series of weekly mini meetups in Vietnam to attract more developers to build on Solana. The mini meetups became a weekly gathering for the Solana community in Vietnam and attracted many developers to build on Solana.</li>
-        <li className="mb-2">Superteam saw the success of the mini meetups and used the momentum to launch a developer bootcamp to train more developers on Solana tech stack.</li>
-      </ul>
-
-      <h2 className="text-2xl font-semibold mb-4">So what's next?</h2>
-      <p className="mb-4">Check out the following articles to learn more. If you have any questions or want to collaborate, feel free to reach out to us on <a href="https://t.me/buildstation" className="text-blue-500 hover:underline">Telegram</a>.</p>
-
-      <h3 className="text-xl font-semibold mb-4">Playbook</h3>
-      <ul className="list-disc pl-6 mb-6">
-        <li className="mb-2"><a href="/devrel-playbook/mini-meetup" className="text-blue-500 hover:underline">mini meetup</a></li>
-        <li className="mb-2"><a href="/devrel-playbook/builder-program" className="text-blue-500 hover:underline">builder program</a></li>
-        <li className="mb-2"><a href="/devrel-playbook/developer-bootcamp" className="text-blue-500 hover:underline">developer bootcamp</a></li>
-        <li className="mb-2"><a href="/devrel-playbook/hacker-house" className="text-blue-500 hover:underline">hacker house</a></li>
-      </ul>
+      <KeyboardNav keyboardNavItems={keyboardNavItems} />
     </div>
   )
 }

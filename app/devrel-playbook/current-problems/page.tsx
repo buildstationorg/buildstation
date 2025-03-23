@@ -70,7 +70,7 @@ export default function CurrentProblemsPage() {
     },
     {
       keyboard: "2",
-      description: "Case studies",
+      description: "Sections",
       url: "/devrel-playbook/case-studies",
     },
   ];
