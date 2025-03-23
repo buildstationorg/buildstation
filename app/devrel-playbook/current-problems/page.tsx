@@ -65,8 +65,13 @@ export default function CurrentProblemsPage() {
   const keyboardNavItems = [
     {
       keyboard: "1",
-      description: "Videos",
-      url: "/videos",
+      description: "Sections",
+      url: "/devrel-playbook/proposed-solutions",
+    },
+    {
+      keyboard: "2",
+      description: "Case studies",
+      url: "/devrel-playbook/case-studies",
     },
   ];
 
