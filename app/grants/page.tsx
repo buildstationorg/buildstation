@@ -6,15 +6,52 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import Image from "next/image";
+import TerminalMenu from "@/components/terminal-menu";
+import KeyboardNav from "@/components/keyboard-nav";
 
 export default function GrantsPage() {
+  const menuItems = [
+    {
+      id: 1,
+      name: "Open proposals",
+      url: "https://github.com/buildstationorg/grants/issues",
+    },
+    {
+      id: 2,
+      name: "Rules",
+      url: "https://github.com/buildstationorg/grants",
+    },
+    {
+      id: 3,
+      name: "Open discussion threads",
+      url: "https://github.com/buildstationorg/grants/discussions",
+    },
+  ];
+
+  const keyboardNavItems = [
+    {
+      keyboard: "1",
+      description: "Links",
+      url: "https://github.com/buildstationorg/grants/issues",
+    },
+    {
+      keyboard: "2",
+      description: "Rules",
+      url: "https://github.com/buildstationorg/grants",
+    },
+    {
+      keyboard: "3",
+      description: "Links",
+      url: "https://github.com/buildstationorg/grants/discussions",
+    },
+  ];
+
   return (
     <div className="flex flex-col gap-8">
-      <Breadcrumb className="mb-8">
+      <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            <BreadcrumbLink href="/">00. Index</BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
@@ -22,62 +59,35 @@ export default function GrantsPage() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-
-      <Image
-        src="/buildstation-grants.png"
-        alt="the pitfalls of devrel"
-        width={1500}
-        height={750}
-        className="mb-8"
-      />
-
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Grants</h1>
-
-      <section>
-        <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">Overview</h2>
-        <p className="leading-7 mt-4">
-          🛠️ Welcome to buildstation grants program. We fund open source projects across many ecosystems.
-        </p>
-      </section>
-
-      <section>
-        <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">Rules</h2>
-        <ul className="my-4 ml-6 list-disc">
-          <li>Fully open source and no usage of business license.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">Proposal guidelines</h2>
-        <ul className="my-4 ml-6 list-disc space-y-2">
-          <li>Go to the Issue section for this GitHub repo: <a href="https://github.com/buildstationorg/grants/issues" className="text-primary hover:underline">https://github.com/buildstationorg/grants/issues</a></li>
-          <li>Use the proposal template to create a proposal describing your idea.</li>
-          <li>Our team will discuss with you to assign a grant amount according to your description.</li>
-          <li>Upon receiving the approved tag for your issue, you can start working on the submission.</li>
-          <li>Once you are done with your submission, submit the open source GitHub repo links and deployed links for your submission in the previously created Issue.</li>
-          <li>We will communicate with you further on your submission to ensure quality control and provide final grant status.</li>
-          <li>To receive payout, create a repository in your github with the name <code>buildstationorg</code> and add a <code>funding.json</code> file in the repo containing addresses in multiple chains. An example is attached here: <a href="https://github.com/zxstim/buildstationorg" className="text-primary hover:underline">https://github.com/zxstim/buildstationorg</a></li>
-          <li>If you have received the status: <code>cleared</code>, we will process your payout to the linked address in your repo. Your issue will be marked <code>paid</code> after payout has been completed.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">Discussion</h2>
-        <ul className="my-4 ml-6 list-disc space-y-2">
-          <li>Go to the Discussion section for this GitHub repo: <a href="https://github.com/buildstationorg/grants/discussions" className="text-primary hover:underline">https://github.com/buildstationorg/grants/discussions</a></li>
-          <li>Open a new discussion to discuss your idea with the community.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">Contact us</h2>
-        <p className="leading-7 mt-4">
-          Tag our handle <a href="https://x.com/buildstationorg" className="text-primary hover:underline">@buildstationorg</a> or <a href="https://x.com/zxstim" className="text-primary hover:underline">@zxstim</a> on <a href="https://x.com" className="text-primary hover:underline">X</a>
-        </p>
-        <p className="leading-7">
-          Our email: core@buildstation.org
-        </p>
-      </section>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
+        <div className="flex flex-col gap-4 w-full md:w-5/6 text-left">
+          <div className="flex flex-row gap-2 items-center">
+            <span className="text-sm bg-primary text-secondary font-bold px-2 py-1">
+              $
+            </span>
+            <h1 className="text-md font-bold">Grants</h1>
+          </div>
+          <h1 className="text-xl md:text-3xl font-bold">
+            Funding the commons
+          </h1>
+          <div className="flex flex-col gap-12 mt-4">
+            <p className="text-md">
+              🛠️ Welcome to buildstation grants program. We fund open source projects across many ecosystems.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col border-2 border-primary gap-2 pb-8">
+          <div className="flex flex-row justify-between items-center bg-primary text-secondary p-2">
+            <h1 className="text-lg md:text-xl font-bold">Terminal</h1>
+            <p className="text-md">_</p>
+          </div>
+          <div className="flex flex-col px-4 py-2">
+            <h2 className="text-md">$ cat grants.md</h2>
+            <TerminalMenu menuItems={menuItems} />
+          </div>
+        </div>
+      </div>
+      <KeyboardNav keyboardNavItems={keyboardNavItems} />
     </div>
   );
 }
