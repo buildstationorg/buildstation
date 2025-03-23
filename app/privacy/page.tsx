@@ -6,8 +6,17 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import KeyboardNav from "@/components/keyboard-nav";
 
 export default function Page() {
+  const keyboardNavItems = [
+    {
+      keyboard: "1",
+      description: "Privacy",
+      url: "/privacy",
+    },
+  ];
+
   return (
     <div className="flex flex-col gap-8">
       <Breadcrumb>
@@ -458,6 +467,7 @@ export default function Page() {
           </p>
         </li>
       </ul>
+      <KeyboardNav keyboardNavItems={keyboardNavItems} />
     </div>
   );
 }
