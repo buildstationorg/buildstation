@@ -68,9 +68,9 @@ export default function ProposedSolutionsPage() {
     {
       title: "devrel-as-a-builder-in-residence.md",
       contents: [
-        "DevRel as a builder in residence is a strategy that allows DevRel to be a builder in residence for a period of time. This allows the DevRel to be more involved in the ecosystem and to have a deeper understanding of the ecosystem.",
-        "The DevRel will be given a set of repositories to work on and a timeline to complete the work. The DevRel will be given a budget to work on the repositories.",
-        "The DevRel will be given a mentor to guide them through the process.",
+        "So currently DevRel is more of a developer support/developer sales + marketing role. We think with the growth of AI developer toolings, it's better to have the DevRel to be a builder in residence.",
+        "The DevRel(s) will be building in public open source projects/software/dapps and contribute to the ecosystem similar to every other builders. They need to be active on social media platforms, promote their work, and show what the ecosystem is capable of.",
+        "This way, other developers can learn from the journey, and the DevRel can be a role model for the community to follow, someone that inspires others to build.",
       ],
       links: undefined,
     },
