@@ -20,6 +20,7 @@ export default function CaseStudiesPage() {
   const [terminalContent, setTerminalContent] = useState<TerminalContentProps>({
     title: "",
     contents: [],
+    links: undefined,
   });
 
   const terminalContentList = [
@@ -28,24 +29,28 @@ export default function CaseStudiesPage() {
       contents: [
         "Many grifters/grift agencies always offer solutions that are unrealistic, unsustainable, and costly (especially if the foundation is giving them money) without being able to deliver any tangible results.",
       ],
+      links: undefined,
     },
     {
       title: "builder-program.md",
       contents: [
         "Hackathons don't work as well as they used to be. They are expensive to run, hackathon winners usually don't continue building after the hackathon ends, and hackathons often exclude vast amount of developers that are too busy to participate because of their day jobs."
       ],
+      links: undefined,
     },
     {
       title: "better-hackathon.md",
       contents: [
         "Scammy/soft-rug projects that always demand big grants without actually delivering any products or services."
       ],
+      links: undefined,
     },
     {
       title: "ai-powered-approach.md",
       contents: [
         "Lack of defined tracking metrics, accountability and transparency in the ecosystem, especially in the various incentive programs to builders."
       ],
+      links: undefined,
     }
   ];
 

@@ -26,6 +26,7 @@ export default function TreasuryPage() {
   const [terminalContent, setTerminalContent] = useState<TerminalContentProps>({
     title: "",
     contents: [],
+    links: undefined,
   });
 
   const { data: arbEthBalance, isLoading: arbLoading } = useBalance({
@@ -61,18 +62,21 @@ export default function TreasuryPage() {
       contents: [
         "0 SCR"
       ],
+      links: undefined,
     },
     {
       title: "arbitrum",
       contents: [
         "ETH"
       ],
+      links: undefined,
     },
     {
       title: "donate",
       contents: [
         "ETH"
       ],
+      links: undefined,
     }
   ];
 
