@@ -20,13 +20,11 @@ export const CopyButton = ({ text }: any) => {
       {isCopied ?
         <div className="flex flex-row gap-2 items-center">
           <Check className="h-6 w-6" />
-          Copied!
         </div> 
         
         : 
         <div className="flex flex-row gap-2 items-center">
           <ClipboardList className="h-6 w-6" />
-          Copy
         </div>
       }
     </button>
