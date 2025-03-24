@@ -9,7 +9,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import KeyboardNav from "@/components/keyboard-nav";
+import KeyboardNav, { KeyboardNavItem } from "@/components/keyboard-nav";
 import { MousePointerClick, ChevronRight } from 'lucide-react';
 import TerminalContent, { TerminalContentProps } from "@/components/terminal-content";
 import { MenuItem } from "@/components/terminal-menu";
@@ -23,49 +23,98 @@ export default function CaseStudiesPage() {
     links: undefined,
   });
 
+  const [keyboardNavItems, setKeyboardNavItems] = useState<KeyboardNavItem[]>([
+    {
+      keyboard: "1",
+      description: "Sections",
+      url: "/devrel-playbook/current-problems",
+    },
+    {
+      keyboard: "2",
+      description: "Sections",
+      url: "/devrel-playbook/proposed-solutions",
+    },
+  ]);
+
   const terminalContentList = [
     {
-      title: "meetup-strategy.md",
+      title: "kaia.md",
       contents: [
-        "Many grifters/grift agencies always offer solutions that are unrealistic, unsustainable, and costly (especially if the foundation is giving them money) without being able to deliver any tangible results.",
+        "Kaia ecosystem back in 2023 was very small, and lack developer activities from the community.",
+        "buildstation along with Kaia team and partners launched a series of weekly mini meetups in Vietnam to attract more developers to build on Kaia. And a builder program with block rewards was setup to incentivize developers to contribute to the ecosystem.",
+        "The program was a success, attracted tons of proposals and contributions to the ecosystem."
+      ],
+      links: [
+        {
+          id: 3,
+          name: "Kaia Dapp Monorepo",
+          url: "https://github.com/kaiachain/kaia-dapp-mono",
+        },
+      ],
+    },
+    {
+      title: "openguild.md",
+      contents: [
+        "OpenGuild is a community that onboards new builders to the Polkadot ecosystem.",
+        "buildstation collaborates with OpenGuild to build open source software (e.g. DotUI), operate hackathons and meetups together."
+      ],
+      links: [
+        {
+          id: 4,
+          name: "DotUI",
+          url: "https://dotui.buildstation.org",
+        },
+        {
+          id: 5,
+          name: "OpenGuild",
+          url: "https://openguild.wtf",
+        },
+      ],
+    },
+    {
+      title: "solana-superteam-vietnam.md",
+      contents: [
+        "Solana Superteam Vietnam is a community that onboards new builders to the Solana ecosystem.",
+        "buildstation collaborates with Solana Superteam Vietnam to run Solana BuildStation meetups."
       ],
       links: undefined,
     },
     {
-      title: "builder-program.md",
+      title: "sui-aquamove.md",
       contents: [
-        "Hackathons don't work as well as they used to be. They are expensive to run, hackathon winners usually don't continue building after the hackathon ends, and hackathons often exclude vast amount of developers that are too busy to participate because of their day jobs."
+        "Sui AquaMove Vietnam is a community that onboards new builders to the Sui ecosystem.",
+        "buildstation collaborates with Sui AquaMove Vietnam to run Sui BuildStation meetups."
       ],
       links: undefined,
     },
     {
-      title: "better-hackathon.md",
+      title: "metapool-build-buddies.md",
       contents: [
-        "Scammy/soft-rug projects that always demand big grants without actually delivering any products or services."
+        "MetaPool is a Liquid Staking platform for various L1s.",
+        "buildstation collaborates with MetaPool to run MetaPool Build Buddies meetups."
       ],
       links: undefined,
     },
     {
-      title: "ai-powered-approach.md",
+      title: "bifrost.md",
       contents: [
-        "Lack of defined tracking metrics, accountability and transparency in the ecosystem, especially in the various incentive programs to builders."
+        "Bifrost is a crosschain Liquid Staking platform for Polkadot and Ethereum.",
+        "buildstation along with community partners collaborates with Bifrost to run Bifrost Mono grant program and Bifrost DeFi 101 meetups."
       ],
-      links: undefined,
+      links: [
+        {
+          id: 6,
+          name: "Bifrost Mono",
+          url: "https://github.com/bifrost-io/mono",
+        },
+        {
+          id: 7,
+          name: "Bifrost Events",
+          url: "https://lu.ma/user/Bifrost",
+        },
+      ],
     }
   ];
-
-  // <h3 className="text-xl font-semibold mb-4">Case study 1 with Kaia Vietnam</h3>
-  // <ul className="list-disc pl-6 mb-6">
-  //   <li className="mb-2">Kaia launched a series of weekly mini meetups in Vietnam to attract more developers to build on their platform. The mini meetups were a huge success and attracted many developers to build on Klaytn. Cost for each meetup was less than $50 and the marketing impact was huge.</li>
-  //   <li className="mb-2">Kaia also created a builder program with Dorahacks to incentivize developers to contribute. The bounty program quickly attracted over 50 developers within its first month to actively contribute to the Klaytn ecosystem. Activites are transparently tracked on GitHub (with Issues, Pull Requests and Discussion topics).</li>
-  //   <li className="mb-2">Builder program created more impact to Kaia ecosystem than the previous Hackathon event (Klaymakers23) in terms of developer engagement and contributions.</li>
-  // </ul>
-
-  // <h3 className="text-xl font-semibold mb-4">Case study 2 with Solana Superteam Vietnam</h3>
-  // <ul className="list-disc pl-6 mb-6">
-  //   <li className="mb-2">Superteam launched a series of weekly mini meetups in Vietnam to attract more developers to build on Solana. The mini meetups became a weekly gathering for the Solana community in Vietnam and attracted many developers to build on Solana.</li>
-  //   <li className="mb-2">Superteam saw the success of the mini meetups and used the momentum to launch a developer bootcamp to train more developers on Solana tech stack.</li>
-  // </ul>
 
 
   const menuItems: MenuItem[] = [
@@ -81,23 +130,64 @@ export default function CaseStudiesPage() {
     },
   ];
 
-  const keyboardNavItems = [
-    {
-      keyboard: "1",
-      description: "Sections",
-      url: "/devrel-playbook/current-problems",
-    },
-    {
-      keyboard: "2",
-      description: "Sections",
-      url: "/devrel-playbook/proposed-solutions",
-    },
-  ];
 
   function handleTerminalContentClick(title: string) {
     const content = terminalContentList.find((item) => item.title === `${title}.md`);
     if (content) {
       setTerminalContent(content);
+    }
+
+    switch (title) {
+      case "kaia":
+        setKeyboardNavItems([
+          { keyboard: "1", description: "Sections", url: "/devrel-playbook/current-problems" },
+          { keyboard: "2", description: "Sections", url: "/devrel-playbook/proposed-solutions" },
+          { keyboard: "3", description: "Sections", url: "https://github.com/kaiachain/kaia-dapp-mono" },
+        ]);
+        break;
+      
+      case "openguild":
+        setKeyboardNavItems([
+          { keyboard: "1", description: "Sections", url: "/devrel-playbook/current-problems" },
+          { keyboard: "2", description: "Sections", url: "/devrel-playbook/proposed-solutions" },
+          { keyboard: "4", description: "Sections", url: "https://dotui.buildstation.org" },
+          { keyboard: "5", description: "Sections", url: "https://openguild.wtf" },
+        ]);
+        break;
+
+      case "solana-superteam-vietnam":
+        setKeyboardNavItems([
+          { keyboard: "1", description: "Sections", url: "/devrel-playbook/current-problems" },
+          { keyboard: "2", description: "Sections", url: "/devrel-playbook/proposed-solutions" },
+        ]);
+        break;
+      case "sui-aquamove":
+        setKeyboardNavItems([
+          { keyboard: "1", description: "Sections", url: "/devrel-playbook/current-problems" },
+          { keyboard: "2", description: "Sections", url: "/devrel-playbook/proposed-solutions" },
+        ]);
+        break;
+      case "metapool-build-buddies":
+        setKeyboardNavItems([
+          { keyboard: "1", description: "Sections", url: "/devrel-playbook/current-problems" },
+          { keyboard: "2", description: "Sections", url: "/devrel-playbook/proposed-solutions" },
+        ]);
+        break;
+
+      case "bifrost":
+        setKeyboardNavItems([
+          { keyboard: "1", description: "Sections", url: "/devrel-playbook/current-problems" },
+          { keyboard: "2", description: "Sections", url: "/devrel-playbook/proposed-solutions" },
+          { keyboard: "6", description: "Sections", url: "https://github.com/bifrost-io/mono" },
+          { keyboard: "7", description: "Sections", url: "https://lu.ma/user/Bifrost" },
+        ]); 
+        break;
+
+      default:
+        setKeyboardNavItems([
+          { keyboard: "1", description: "Sections", url: "/devrel-playbook/current-problems" },
+          { keyboard: "2", description: "Sections", url: "/devrel-playbook/proposed-solutions" },
+        ]);
     }
   }
   
@@ -132,24 +222,34 @@ export default function CaseStudiesPage() {
               Recognizing the problems, buildstation has pioneered and tested various solutions to help all ecosystems to grow their builder base in a sustainable manner, which includes:
             </p>
             <div className="flex flex-col gap-4">
-              <button onClick={() => handleTerminalContentClick("grifters")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
+              <button onClick={() => handleTerminalContentClick("kaia")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
                 <ChevronRight className="w-6 h-6 mr-2" />
-                Meetup strategy
+                Kaia
                 <MousePointerClick className="w-4 h-4 ml-2" />
               </button>
-              <button onClick={() => handleTerminalContentClick("hackathon-trap")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
+              <button onClick={() => handleTerminalContentClick("openguild")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
                 <ChevronRight className="w-6 h-6 mr-2" />
-                Builder program
+                OpenGuild
                 <MousePointerClick className="w-4 h-4 ml-2" />
               </button>
-              <button onClick={() => handleTerminalContentClick("scammy-projects")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
+              <button onClick={() => handleTerminalContentClick("solana-superteam-vietnam")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
                 <ChevronRight className="w-6 h-6 mr-2" />
-                Better hackathon
+                Solana Superteam Vietnam
                 <MousePointerClick className="w-4 h-4 ml-2" />
               </button>
-              <button onClick={() => handleTerminalContentClick("lack-of-goals-and-metrics")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
+              <button onClick={() => handleTerminalContentClick("sui-aquamove")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
                 <ChevronRight className="w-6 h-6 mr-2" />
-                AI powered approach
+                Sui AquaMove Vietnam
+                <MousePointerClick className="w-4 h-4 ml-2" />
+              </button>
+              <button onClick={() => handleTerminalContentClick("metapool-build-buddies")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
+                <ChevronRight className="w-6 h-6 mr-2" />
+                MetaPool Build Buddies
+                <MousePointerClick className="w-4 h-4 ml-2" />
+              </button>
+              <button onClick={() => handleTerminalContentClick("bifrost")} className="flex flex-row items-center rounded-none text-left w-fit relative after:absolute after:bg-primary after:h-full after:w-0 hover:after:w-full after:transition-all after:duration-300 after:left-0 after:top-0 after:-z-10 hover:text-secondary">
+                <ChevronRight className="w-6 h-6 mr-2" />
+                Bifrost
                 <MousePointerClick className="w-4 h-4 ml-2" />
               </button>
             </div>

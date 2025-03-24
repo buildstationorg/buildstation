@@ -4,13 +4,13 @@ import { useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 
-interface KeyboardNavItems {
+export interface KeyboardNavItem {
   keyboard: string
   description: string
   url: string
 }
 
-export default function KeyboardNav({ keyboardNavItems }: { keyboardNavItems: KeyboardNavItems[] }) {
+export default function KeyboardNav({ keyboardNavItems }: { keyboardNavItems: KeyboardNavItem[] }) {
   const router = useRouter()
 
   useEffect(() => {
