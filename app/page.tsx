@@ -89,7 +89,7 @@ export default function Home() {
         <div className="flex flex-col gap-12 mt-4">
           <p className="text-md">High quality, open source, open code software for onchain developers. Design, build and launch your best DApp from scratch.</p>
           <p className="text-md">Join a vibrant builder community to learn, ask questions, and get help. Get the guidance to start and iterate your product with the community feedbacks.</p>
-          <p className="text-md">Founded upon the cypherpunk ethos of privacy, security, and freedom.</p>
+          <p className="text-md">Founded upon the freedom software movement ethos of transparency, collaboration, and empowerment.</p>
         </div>
       </div>
       <div className="flex flex-col border-2 border-primary gap-2 pb-8">
