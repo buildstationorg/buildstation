@@ -3,7 +3,7 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark, oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { CopyButton } from '@/components/copy-button';
-import { File, Terminal } from 'lucide-react';
+import { Terminal } from 'lucide-react';
 
 export default function Code({ children, className }: { children?: React.ReactNode, className?: string }) {
   

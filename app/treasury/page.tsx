@@ -228,6 +228,7 @@ export default function TreasuryPage() {
               <div className="flex flex-col gap-4">
                 {terminalContent.links.map((link) => (
                   <Link
+                    key={link.id}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
