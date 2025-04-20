@@ -46,12 +46,12 @@ export default function Footer() {
         <div className="flex flex-col">
           <div className="grow border border-primary p-10">
             <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight">For builders</h2>
-            <p className="leading-7 [&:not(:first-child)]:mt-6 mb-6">So you are ready to build stuffs, huh? Go to buildstation GitHub and join the global hacker movement!</p>
+            <p className="leading-7 not-first:mt-6 mb-6">So you are ready to build stuffs, huh? Go to buildstation GitHub and join the global hacker movement!</p>
             <a className="flex flex-row gap-2 items-center dark:text-blue-400 text-blue-500 underline underline-offset-4" href="https://github.com/buildstationorg" target="_blank">
               Explore our repositories <ExternalLink className="w-4 h-4" />
             </a>
           </div>
-          <div className="grid grid-cols-3 border border-primary [&>*:not(:last-child)]:border-r [&>*]:border-primary">
+          <div className="grid grid-cols-3 border border-primary [&>*:not(:last-child)]:border-r *:border-primary">
             <a target="_blank" href="https://x.com/buildstationorg">
               <div className="flex py-6 items-center justify-center text-primary-foreground">
                 <Image className="dark:invert" src="/x.svg" alt="X" width={28} height={28} />

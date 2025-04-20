@@ -22,8 +22,8 @@ function ChildCard({ description, href, title }: ChildCardProps) {
       href={href}
       className="border rounded-md p-4 no-underline flex flex-col gap-0.5"
     >
-      <h4 className="!my-0">{title}</h4>
-      <p className="text-sm text-muted-foreground !my-0">{description}</p>
+      <h4 className="my-0!">{title}</h4>
+      <p className="text-sm text-muted-foreground my-0!">{description}</p>
     </Link>
   );
 }

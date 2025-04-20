@@ -13,7 +13,7 @@ export default function PageNav(nav: PageNavProps) {
         <Link href={nav.forward.slug}>
           <div className="flex flex-row justify-between items-center text-left p-4 border-2 rounded-md hover:border-blue-500 hover:text-blue-500 text-muted-foreground">
             <div className="flex flex-col gap-2">
-              <div className="!text-sm !text-primary">Next</div>
+              <div className="text-sm! text-primary!">Next</div>
               <div className="text-md font-semibold">{nav.forward.title}</div>
             </div>
             <ChevronRight />
@@ -30,7 +30,7 @@ export default function PageNav(nav: PageNavProps) {
           <div className="flex flex-row justify-between items-center text-right p-4 border-2 rounded-md hover:border-blue-500 hover:text-blue-500 text-muted-foreground">
             <ChevronLeft />
             <div className="flex flex-col gap-2">
-              <div className="!text-sm !text-primary">Previous</div>
+              <div className="text-sm! text-primary!">Previous</div>
               <div className="text-md font-semibold">{nav.backward.title}</div>
             </div>
           </div>
@@ -45,7 +45,7 @@ export default function PageNav(nav: PageNavProps) {
         <div className="flex flex-row justify-between items-center text-right p-4 border-2 rounded-md hover:border-blue-500 hover:text-blue-500 text-muted-foreground">
           <ChevronLeft />
           <div className="flex flex-col gap-2">
-            <div className="!text-sm !text-primary">Previous</div>
+            <div className="text-sm! text-primary!">Previous</div>
             <div className="text-md font-semibold">{nav.backward.title}</div>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function PageNav(nav: PageNavProps) {
       <Link href={nav.forward.slug}>
         <div className="flex flex-row justify-between items-center text-left p-4 border-2 rounded-md hover:border-blue-500 hover:text-blue-500 text-muted-foreground">
           <div className="flex flex-col gap-2">
-            <div className="!text-sm !text-primary">Next</div>
+            <div className="text-sm! text-primary!">Next</div>
             <div className="text-md font-semibold">{nav.forward.title}</div>
           </div>
           <ChevronRight />
