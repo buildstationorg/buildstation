@@ -218,8 +218,8 @@ export default function TreasuryPage() {
                     {">"} send any funds to <Link href="https://app.ens.domains/buildstation.eth" target="_blank" rel="noopener noreferrer" className="text-blue-500 dark:text-blue-400 underline underline-offset-4 inline-block">buildstation.eth</Link> <span className="inline-block align-middle"><CopyButton text="buildstation.eth" /></span>
                   </p>
                   <div className="flex flex-row items-center gap-2 text-muted-foreground">
-                    {">"} 0x91...dF2b8A
-                    <CopyButton text="0x91ab3daa9086D719Ebf8c96Ea6Ca3d94e9dF2b8A" />
+                    {">"} 0xd0...e2EbDB
+                    <CopyButton text="0xd06c478DbfE22c014EA0E76A0BB216f346e2EbDB" />
                   </div>
                 </div>
               ) : null
